@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ProFotoVideo</title>
+
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+<body>
+  <header>
+    <a href="/"><h1>ProFotoVideo</h1></a> 
+    
+    <nav>
+      <li><a href="/photo">Foto</a></li>
+      <li><a href="/video">Video</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </nav>
+  </header>
+  {% block content %} {% endblock %}
+
+  <script src="{% static 'assets/js/index.js'%}"></script>
+</body>
+</html>
