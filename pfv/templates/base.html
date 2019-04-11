@@ -8,6 +8,7 @@
   <title>ProFotoVideo</title>
 
   <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
 </head>
 <body>
   <header>
@@ -22,6 +23,7 @@
   
   {% block content %} {% endblock %}
 
+  <script src="{% static 'assets/js/lightbox-plus-jquery.min.js'%}"></script>
   <script src="{% static 'assets/js/index.js'%}"></script>
   <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
