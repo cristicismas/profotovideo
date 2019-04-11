@@ -90,10 +90,11 @@ iframe {
 }
 
 .featured-photos {
+  max-width: 85%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 30px 10px;
+  margin: 30px auto;
 }
 
 .featured-photos a {
