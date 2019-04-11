@@ -15,6 +15,12 @@ li {
   list-style-type: none;
 }
 
+.title {
+  text-align: center;
+  font-weight: normal;
+  font-size: 30px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -137,7 +143,7 @@ iframe {
 }
 
 .plans #premium {
-  border-color: #008cff;
+  border-color: #ff664b;
 }
 
 .plans #gold {
@@ -155,7 +161,7 @@ iframe {
 }
 
 .plans #premium h3 {
-  color: #39a3fa;
+  color: #ff664b;
 }
 
 .plans #gold h3 {
