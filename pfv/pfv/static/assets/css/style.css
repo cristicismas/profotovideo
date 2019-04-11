@@ -100,4 +100,5 @@ iframe {
 
 .featured-photos img:hover {
   transform: translateY(-5px);
+  filter: grayscale(50%);
 }
