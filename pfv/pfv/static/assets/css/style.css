@@ -90,15 +90,20 @@ iframe {
   margin: 30px 10px;
 }
 
-.featured-photos img {
+.featured-photos a {
   margin: 20px;
+}
+
+.featured-photos img {
   max-width: 400px;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: zoom-in;
   transition: all 0.2s;
+  overflow: hidden;
+  border: 2px solid #ccc;
 }
 
 .featured-photos img:hover {
   transform: translateY(-5px);
-  filter: grayscale(50%);
+  filter: grayscale(80%);
 }
