@@ -1,6 +1,18 @@
+.zoom-container {
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+.photo {
+  transform: scale(1.05);
+}
+
 .photo:hover {
-  transform: translateY(-5px);
-  filter: grayscale(80%);
+  transform: scale(1.2);
+  filter: grayscale(100%);
 }
 
 .featured-photos {
@@ -11,36 +23,31 @@
   margin: 30px auto;
 }
 
-.featured-photos a {
-  margin: 20px;
-}
-
 .featured-photos .photo {
   max-width: 400px;
-  border-radius: 5px;
   cursor: zoom-in;
   transition: all 0.2s;
   overflow: hidden;
-  border: 2px solid;
 }
 
 .photos {
   width: 85%;
   margin: auto;
   column-count: 5;
-  column-gap: 30px;
+  column-gap: 0px;
+}
+
+.photos > * {
+  margin-top: 30px;
 }
 
 .photos .photo {
-  margin: 15px;
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: 700px;
-  border-radius: 5px;
   cursor: zoom-in;
   transition: all 0.2s;
   overflow: hidden;
-  border: 2px solid;
 }
 
 #photos-title {
