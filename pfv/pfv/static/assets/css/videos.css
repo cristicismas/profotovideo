@@ -5,7 +5,7 @@
 
 iframe {
   position: absolute;
-  top: 10px;
+  top: 2px;
   left: 0;
   width: 100%;
   height: calc(100% - 83px);
@@ -18,5 +18,12 @@ iframe {
 @media only screen and (orientation: portrait) {
   iframe {
     height: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  iframe {
+    height: 100%;
+    top: -80px;
   }
 }
