@@ -1,0 +1,66 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+  background-color: #151515;
+  border-bottom: 2px solid #ccc;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+}
+
+header + .title,
+header + section,
+header + div {
+  margin-top: 83px;
+}
+
+header h1 {
+  transition: all 0.2s;
+}
+
+header h1:hover {
+  color: #00b7ff;
+}
+
+header nav {
+  display: flex;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+header nav li {
+  margin-left: 20px;
+}
+
+header nav a {
+  padding: 10px 10px;
+  transition: all 0.2s;
+  position: relative;
+  left: -70px;
+}
+
+header nav a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #008cff;
+  transition: width 0.2s ease;
+  -webkit-transition: width 0.2s ease;
+}
+
+header nav a:hover:after {
+  width: 100%;
+  left: 0;
+  background: #008cff;
+}
+
+header nav a:hover {
+  background-color: #222;
+}
