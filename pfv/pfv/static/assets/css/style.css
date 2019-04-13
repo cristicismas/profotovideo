@@ -38,6 +38,17 @@ header {
   padding: 0px 50px;
   background-color: #151515;
   border-bottom: 2px solid #ccc;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+}
+
+header + .title,
+header + section,
+header + div {
+  margin-top: 83px;
 }
 
 header h1 {
@@ -62,6 +73,7 @@ header nav a {
   padding: 10px 10px;
   transition: all 0.2s;
   position: relative;
+  left: -70px;
 }
 
 header nav a:after {
@@ -196,6 +208,11 @@ iframe {
     rgba(236, 211, 0, 1) 50%,
     rgba(0, 148, 255, 1) 100%
   );
+}
+
+#photos-title,
+#videos-title {
+  margin-top: 120px;
 }
 
 .photos {
