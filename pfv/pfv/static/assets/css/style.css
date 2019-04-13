@@ -17,8 +17,19 @@ li {
 
 .title {
   text-align: center;
+  cursor: default;
+  display: block;
+  width: 700px;
+  margin: 40px auto;
   font-weight: normal;
   font-size: 30px;
+  text-shadow: 5px 5px 5px #111;
+  transition: all .2s;
+}
+
+.title:hover {
+  transform: skew(-5deg) scale(1.4);
+  text-shadow: 12px 12px 10px #111;
 }
 
 header {
