@@ -76,6 +76,10 @@
   .photos {
     column-count: 1;
   }
+
+  #photos-title {
+    margin-top: 50px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
