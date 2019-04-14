@@ -17,7 +17,8 @@ iframe {
 
 .videos .video-carousel {
   height: 70vh;
-  width: 100vw;
+  width: 95vw;
+  margin: auto;
 }
 
 .videos .carousel-cell {
