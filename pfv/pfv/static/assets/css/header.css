@@ -73,6 +73,12 @@ header nav a:hover {
     position: static;
   }
 
+  header + .title,
+  header + section,
+  header + div {
+    margin-top: 50px;
+  }
+
   header nav {
     justify-content: center;
     margin-top: 0;

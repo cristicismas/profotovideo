@@ -11,10 +11,6 @@ iframe {
   height: calc(100% - 150px);
 }
 
-#videos-title {
-  margin-top: 120px;
-}
-
 .videos .video-carousel {
   height: 70vh;
   width: 95vw;
@@ -68,10 +64,6 @@ iframe {
 
   .videos .video-carousel {
     height: 350px;
-  }
-
-  #videos-title {
-    margin-top: 40px;
   }
 }
 
