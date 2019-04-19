@@ -69,3 +69,9 @@
     rgba(0, 148, 255, 1) 100%
   );
 }
+
+@media only screen and (max-width: 790px) {
+  .plans .plan {
+    margin: 20px;
+  }
+}
