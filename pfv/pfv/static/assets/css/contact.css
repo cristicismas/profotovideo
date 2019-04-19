@@ -48,3 +48,36 @@
 .contact a:hover {
   border-bottom: 2px dashed #111;
 }
+
+@media only screen and (max-width: 770px) {
+  .contact {
+    font-size: 25px;
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .contact {
+    font-size: 20px;
+  }
+
+  .contact > div,
+  .contact > div:hover {
+    box-shadow: 0 10px 25px 0 #111;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact {
+    font-size: 16px;
+    margin: 15px auto;
+  }
+
+  .contact > div {
+    padding: 10px 15px;
+  }
+
+  .contact > div * {
+    margin-bottom: 25px;
+  }
+}
