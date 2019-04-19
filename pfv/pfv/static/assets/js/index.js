@@ -4,7 +4,8 @@ if (carousel) {
   var flkty = new Flickity(carousel, {
     cellAlign: "center",
     wrapAround: true,
-    pageDots: false
+    pageDots: false,
+    draggable: false
   });
 
   if (window.innerWidth < 700) {
@@ -20,7 +21,8 @@ if (carousel) {
       flkty = new Flickity(carousel, {
         cellAlign: "center",
         wrapAround: true,
-        pageDots: false
+        pageDots: false,
+        draggable: false
       });
     }
 
