@@ -1,6 +1,6 @@
 .contact {
   text-align: center;
-  font-size: 35px;
+  font-size: 25px;
   margin: 50px auto;
   display: flex;
   flex-wrap: wrap;
@@ -10,7 +10,7 @@
 .contact > div {
   background-color: #111;
   padding: 25px;
-  width: 600px;
+  width: 400px;
   margin: 24px 60px;
   transition: all .2s;
 }
