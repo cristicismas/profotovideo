@@ -34,7 +34,7 @@
   border-color: gold;
 }
 
-.plans #complet {
+.plans #platinum {
   border-color: transparent;
   background-clip: padding-box;
   position: relative;
@@ -52,7 +52,7 @@
   color: gold;
 }
 
-.plans #complet:before {
+.plans #platinum:before {
   content: "";
   position: absolute;
   top: 0;
