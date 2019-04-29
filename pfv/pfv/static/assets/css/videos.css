@@ -11,6 +11,10 @@ iframe {
   height: calc(100% - 150px);
 }
 
+.featured-video iframe {
+  top: 80px;
+}
+
 .videos .video-carousel {
   height: 70vh;
   width: 95vw;
@@ -53,6 +57,10 @@ iframe {
   iframe {
     height: 100%;
     top: -80px;
+  }
+
+  .featured-video iframe {
+    top: 0px;
   }
 
   .videos iframe {
