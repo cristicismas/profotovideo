@@ -11,3 +11,15 @@ div.breadcrumbs {
 .module h2, .module caption {
   background: #191919;
 }
+
+@media only screen and (min-width: 1025px) {
+  #content-related {
+    width: 300px;
+    margin-right: -350px;
+  }
+
+  #content-related li,
+  #content-related li a {
+    font-size: 15px !important;
+  }
+}

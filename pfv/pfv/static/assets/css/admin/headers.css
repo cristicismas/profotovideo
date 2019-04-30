@@ -11,7 +11,6 @@
   color: gold;
 }
 
-
 #content-related .module h2,
 #content-related .module h3 {
   color: #ccc;
@@ -24,4 +23,10 @@
 .selector .selector-available h2 {
   background: #222 !important;
   color: #eee !important;
+}
+
+@media only screen and (min-width: 1025px) {
+  #branding a {
+    font-size: 30px !important;
+  }
 }

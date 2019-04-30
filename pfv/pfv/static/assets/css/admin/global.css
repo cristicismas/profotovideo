@@ -30,3 +30,13 @@ select {
   background: #222;
   color: #eee;
 }
+
+@media only screen and (min-width: 1025px) {
+  body * {
+    font-size: 17px !important;
+  }
+
+  .dashboard #content {
+    width: 60vw;
+  }
+}
