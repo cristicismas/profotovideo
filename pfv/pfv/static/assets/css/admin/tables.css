@@ -1,0 +1,9 @@
+#changelist table tbody tr.selected {
+  background: #213f3f;
+  background-color: #212e3f !important;
+}
+
+#changelist-filter {
+  background: #222 !important;
+  border-left: 1px solid #aaa !important;
+}

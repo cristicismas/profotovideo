@@ -1,0 +1,11 @@
+.errornote,
+.errorlist {
+  background-color: #333;
+  background: #333 !important;
+  color: #fa4c4c !important;
+}
+
+ul.messagelist li {
+  background: #3c963c url(../img/icon-yes.svg) 40px 12px no-repeat;
+  color: #000;
+}

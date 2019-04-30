@@ -1,0 +1,27 @@
+#content > h1 {
+  color: #eee;
+}
+
+#header {
+  background: #222;
+  color: #ffe343;
+}
+
+#branding h1 {
+  color: gold;
+}
+
+
+#content-related .module h2,
+#content-related .module h3 {
+  color: #ccc;
+}
+
+.selector-chosen h2 {
+  background-color: #083968 !important;
+}
+
+.selector .selector-available h2 {
+  background: #222 !important;
+  color: #eee !important;
+}

@@ -1,0 +1,56 @@
+a:focus,
+a:hover {
+  color: #39c6fd;
+}
+
+#user-tools a:focus, 
+#user-tools a:hover {
+  color: #fff1a4;
+  border-bottom-color: #fff1a4;
+}
+
+.object-tools a:link, 
+.object-tools a:visited {
+  background-color: #333;
+}
+
+.object-tools a:focus, 
+.object-tools a:hover {
+  background-color: #2c9ac5;
+}
+
+div.breadcrumbs a:hover {
+  color: #bbb;
+}
+
+div.breadcrumbs a {
+  color: #f5f5f5;
+}
+
+#changelist-filter a:focus, 
+#changelist-filter a:hover, 
+#changelist-filter li.selected a:focus, 
+#changelist-filter li.selected a:hover {
+  color: skyblue !important;
+}
+
+a.selector-chooseall, 
+a.selector-clearall {
+  color: #f5f5f5 !important;
+}
+
+.calendar td a, .timelist a {
+  color: #aaa !important;
+}
+
+.calendar td a:focus, .timelist a:focus, .calendar td a:hover, .timelist a:hover {
+  background: #083968 !important;
+}
+
+.calendar-cancel a {
+  color: #eee !important;
+}
+
+ul.messagelist li a {
+  color: #333;
+}

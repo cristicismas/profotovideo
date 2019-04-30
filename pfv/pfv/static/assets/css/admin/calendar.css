@@ -1,0 +1,29 @@
+.calendarbox, .clockbox {
+  background: #222 !important;
+  border: 1px solid #333 !important;
+}
+
+.calendar table {
+  background: #222 !important;
+}
+
+.calendar td.nonday {
+  background: #292929 !important;
+}
+
+.calendar th {
+  background: #353535 !important;
+  color: #bbb !important;
+}
+
+.calendar-shortcuts {
+  background: #1f1f1f !important;
+}
+
+.calendar-cancel {
+  background: #151515 !important;
+}
+
+.calendar-cancel:focus, .calendar-cancel:hover {
+  background: #222 !important;
+}

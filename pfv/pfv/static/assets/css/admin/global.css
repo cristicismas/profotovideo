@@ -1,0 +1,32 @@
+html {
+  background-color: #111;
+}
+
+body {
+  color: #bbb;
+}
+
+body.login {
+  background: #111 !important;
+}
+
+#container {
+  background-color: #111;
+}
+
+.login #container {
+  background: #222 !important;
+}
+
+th, td {
+  border-bottom-color: #444;
+}
+
+thead th {
+  background: #222 !important;
+}
+
+select {
+  background: #222;
+  color: #eee;
+}
