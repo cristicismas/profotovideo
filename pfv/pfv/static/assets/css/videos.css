@@ -65,7 +65,7 @@ iframe {
   }
 
   .videos .video-carousel {
-    height: 350px;
+    height: 100%;
   }
 }
 
