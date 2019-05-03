@@ -20,6 +20,10 @@ textarea {
   border: 1px solid #444 !important;
 }
 
+#changelist-form {
+  border-bottom: 1px solid #444;
+}
+
 #changelist #toolbar {
   background: #222 !important;
 }
@@ -79,4 +83,5 @@ a.button {
 #changelist .actions,
 #changelist .paginator {
   background: #191919 !important;
+  border-bottom: none !important;
 }

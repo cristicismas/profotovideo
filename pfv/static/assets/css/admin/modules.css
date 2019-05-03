@@ -8,6 +8,10 @@ div.breadcrumbs {
   background: #222;
 }
 
+.change-list .module.filtered {
+  min-height: 0px;
+}
+
 .module h2, .module caption {
   background: #191919;
 }
