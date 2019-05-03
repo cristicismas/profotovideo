@@ -111,9 +111,9 @@
 	}
 
 	.album-wrapper nav a {
-		height: 280px;
-		width: 300px;
-		top: -270px;
+		height: 310px;
+		width: 340px;
+		top: -300px;
 	}
 
 	.album-wrapper nav a .arrow {
@@ -121,24 +121,28 @@
 	}
 
 	.album-wrapper .prev .arrow {
-		left: -140px;
+		left: -160px;
 	}
 
 	.album-wrapper .next .arrow {
-		right: -140px;
+		right: -160px;
 	}
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 720px) {
 	.album img {
 		width: 100%;
 		height: 100%;
 	}
 
+	.album-wrapper .album {
+		border: 10px solid #fccf94;
+	}
+
 	.album-wrapper nav a {
 		height: 50vw;
-		width: 45vw;
-		top: -45vw;
+		width: 47vw;
+		top: -50vw;
 	}
 
 	.album-wrapper nav a .arrow {
