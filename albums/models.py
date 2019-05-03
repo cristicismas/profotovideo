@@ -6,4 +6,7 @@ class Album(models.Model):
 
     def __str__(self):
         return self.title
+
+    def album_slides(self):
+        return self.slides.split('\n')
     

@@ -1,5 +1,12 @@
 from django.shortcuts import render
 
+from .models import Photo
 
 def index(request):
-    return render(request, 'photo.html')
+    photos = Photo.objects.all()
+
+    context = {
+        'photos': photos
+    }
+
+    return render(request, 'photo.html', context)

@@ -5,9 +5,9 @@
 
 <section class="videos">
   <div class="video-carousel">
-    <iframe src="https://player.vimeo.com/video/329557408" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    <iframe src="https://player.vimeo.com/video/329557408" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    <iframe src="https://player.vimeo.com/video/329557408" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    {% for video in videos %}
+      <iframe src="{{ video.url }}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    {% endfor %}
   </div>
 </section>
 {% endblock %}

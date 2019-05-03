@@ -5,58 +5,20 @@
 <h2 class="title">Albume</h2>
 
 <section id="albums">
-  <div class="album-wrapper">
-    <div class="album">
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/1zcrx3Fv/Page001.jpg" alt="image01"/>
+  {% for album in albums %}
+    <div class="album-wrapper">
+      <div class="album">
+        {% for slide in album.album_slides %}
+          <div class="bb-item">
+            <img src="{{ slide }}" alt="image01"/>
+          </div>
+        {% endfor %}
       </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/kX6NJc86/Page002.jpg" alt="image02"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/HxY4T14d/Page003.jpg" alt="image03"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/kgWx8gT7/Page004.jpg" alt="image04"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/MT90T3dR/Page005.jpg" alt="image05"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/nrM4QKPW/Page006.jpg" alt="image06"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/xjFyV7kV/Page007.jpg" alt="image07"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/9F6dr7tx/Page008.jpg" alt="image08"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/HLHbt1NX/Page009.jpg" alt="image09"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/brGnvyGc/Page010.jpg" alt="image10"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/nV57PD5H/Page011.jpg" alt="image11"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/yNPcQrq5/Page012.jpg" alt="image12"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/85XWDJzm/Page013.jpg" alt="image13"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/5yZCYhvH/Page014.jpg" alt="image14"/>
-      </div>
-      <div class="bb-item">
-        <img src="https://i.postimg.cc/9MQTvtCf/Page015.jpg" alt="image15"/>
-      </div>
+      <nav>
+        <a class="prev"><div class="arrow"></div></a>
+        <a class="next"><div class="arrow"></div></a>
+      </nav>
     </div>
-    <nav>
-      <a class="prev"><div class="arrow"></div></a>
-      <a class="next"><div class="arrow"></div></a>
-    </nav>
-  </div>
+  {% endfor %}
 </section>
 {% endblock content %}

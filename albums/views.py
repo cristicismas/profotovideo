@@ -1,5 +1,12 @@
 from django.shortcuts import render
 
+from .models import Album
 
 def index(request):
-    return render(request, 'albums.html')
+    albums = Album.objects.all()
+
+    context = {
+        'albums': albums
+    }
+
+    return render(request, 'albums.html', context)

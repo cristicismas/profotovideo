@@ -11,59 +11,19 @@
 <h2 class="title">Fotografii</h2>
 
 <section class="featured-photos">
-  <div class="zoom-container">
-    <a href="http://blog.afloral.com/wp-content/uploads/2015/12/54f474769db52x900.jpg" data-lightbox="photo">
-      <img class="photo" src="http://blog.afloral.com/wp-content/uploads/2015/12/54f474769db52x900.jpg" alt="photo">
-    </a>
-  </div>
-
-  <div class="zoom-container">
-    <a href="https://cdn.fstoppers.com/styles/full/s3/media/2018/03/29/where-to-price-wedding-photography.jpg" data-lightbox="photo">
-      <img class="photo" src="https://cdn.fstoppers.com/styles/full/s3/media/2018/03/29/where-to-price-wedding-photography.jpg" alt="photo">
-    </a>
-  </div>
-  
-  <div class="zoom-container">
-    <a href="https://www.jesselanewellness.com/wp-content/uploads/2015/10/Top-Wedding-Pics-87.jpg" data-lightbox="photo">
-      <img class="photo" src="https://www.jesselanewellness.com/wp-content/uploads/2015/10/Top-Wedding-Pics-87.jpg" alt="photo">
-    </a>
-  </div>
-
-  <div class="zoom-container">
-    <a href="http://blog.afloral.com/wp-content/uploads/2015/12/54f474769db52x900.jpg" data-lightbox="photo">
-      <img class="photo" src="http://blog.afloral.com/wp-content/uploads/2015/12/54f474769db52x900.jpg" alt="photo">
-    </a>
-  </div>
-  
-  <div class="zoom-container">
-    <a href="https://cdn.fstoppers.com/styles/full/s3/media/2018/03/29/where-to-price-wedding-photography.jpg" data-lightbox="photo">
-      <img class="photo" src="https://cdn.fstoppers.com/styles/full/s3/media/2018/03/29/where-to-price-wedding-photography.jpg" alt="photo">
-    </a>
-  </div>
-  
-  <div class="zoom-container">
-    <a href="https://www.jesselanewellness.com/wp-content/uploads/2015/10/Top-Wedding-Pics-87.jpg" data-lightbox="photo">
-      <img class="photo" src="https://www.jesselanewellness.com/wp-content/uploads/2015/10/Top-Wedding-Pics-87.jpg" alt="photo">
-    </a>
-  </div>
-
-  <div class="zoom-container">
-    <a href="http://blog.afloral.com/wp-content/uploads/2015/12/54f474769db52x900.jpg" data-lightbox="photo">
-      <img class="photo" src="http://blog.afloral.com/wp-content/uploads/2015/12/54f474769db52x900.jpg" alt="photo">
-    </a>
-  </div>
-  
-  <div class="zoom-container">
-    <a href="https://cdn.fstoppers.com/styles/full/s3/media/2018/03/29/where-to-price-wedding-photography.jpg" data-lightbox="photo">
-      <img class="photo" src="https://cdn.fstoppers.com/styles/full/s3/media/2018/03/29/where-to-price-wedding-photography.jpg" alt="photo">
-    </a>
-  </div>
-  
-  <div class="zoom-container">
-    <a href="https://www.jesselanewellness.com/wp-content/uploads/2015/10/Top-Wedding-Pics-87.jpg" data-lightbox="photo">
-      <img class="photo" src="https://www.jesselanewellness.com/wp-content/uploads/2015/10/Top-Wedding-Pics-87.jpg" alt="photo">
-    </a>
-  </div>
+  {% for photo in photos %}
+    {% if photo.isFeatured %}
+      <div class="zoom-container">
+        <a href="{{ photo.url }}" data-lightbox="photo">
+          {% if photo.thumbnail %}
+            <img class="photo" src="{{ photo.thumbnail }}" alt="photo">
+          {% else %}
+            <img class="photo" src="{{ photo.url }}" alt="photo">
+          {% endif %}
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
 </section>
 
 <hr>
