@@ -1,4 +1,4 @@
-.bb-bookblock {
+.album {
 	width: 1024px;
 	height: 512px;
 	margin: 0 auto;
@@ -92,14 +92,14 @@
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
-.bb-bookblock.bb-vertical > div.bb-page:first-child,
-.bb-bookblock.bb-vertical > div.bb-page:first-child .bb-back {
+.album.bb-vertical > div.bb-page:first-child,
+.album.bb-vertical > div.bb-page:first-child .bb-back {
 	-webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
 
-.bb-bookblock.bb-horizontal > div.bb-page:first-child,
-.bb-bookblock.bb-horizontal > div.bb-page:first-child .bb-back {
+.album.bb-horizontal > div.bb-page:first-child,
+.album.bb-horizontal > div.bb-page:first-child .bb-back {
 	-webkit-transform: rotateX(180deg);
 	transform: rotateX(180deg);
 }
@@ -171,7 +171,7 @@
 }
 
 /* No JS */
-.no-js .bb-bookblock, 
+.no-js .album, 
 .no-js ul.bb-custom-grid li {
 	width: auto;
 	height: auto;
@@ -183,21 +183,21 @@
 }
 
 @media only screen and (max-width: 1200px) {
-	.bb-bookblock {
+	.album {
 		width: 740px;
 		height: 370px;
 	}
 }
 
 @media only screen and (max-width: 900px) {
-	.bb-bookblock {
+	.album {
 		width: 520px;
 		height: 260px;
 	}
 }
 
 @media only screen and (max-width: 640px) {
-	.bb-bookblock {
+	.album {
 		width: 90vw;
 		max-height: 40vw;
 	}

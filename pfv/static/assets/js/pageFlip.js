@@ -1,68 +1,43 @@
 var Page = (function () {
 
-  var config = {
-    $bookBlock: $('#bb-bookblock'),
-    $navNext: $('#bb-nav-next'),
-    $navPrev: $('#bb-nav-prev')
-  },
-    init = function () {
-      config.$bookBlock.bookblock({
-        speed: 800,
-        shadowSides: 0.8,
-        shadowFlip: 0.7
-      });
-      initEvents();
-    },
-    initEvents = function () {
+  var albums = $('#albums');
 
-      var $slides = config.$bookBlock.children();
+  return {
+    init: function() {
+      albums.find('div.album').each(function(i) {
+        var album = $(this);
+        var slides = album.children();
+        var nav = album.next().children('a');
+        var bb = album.bookblock({
+          speed: 800,
+          shadowSides: 0.8,
+          shadowFlip: 0.7
+        });
 
-      // add navigation events
-      config.$navNext.on('click touchstart', function () {
-        config.$bookBlock.bookblock('next');
-        return false;
-      });
+        nav.each(function(i) {
+          $(this).on('click touchstart', function () {
+            if ($(this).context.className == 'next') {
+              bb.bookblock('next');
+            } else {
+              bb.bookblock('prev');
+            }
+            return false;
+          });
+        });
 
-      config.$navPrev.on('click touchstart', function () {
-        config.$bookBlock.bookblock('prev');
-        return false;
-      });
-
-      // add swipe events
-      $slides.on({
-        'swipeleft': function (event) {
-          config.$bookBlock.bookblock('next');
-          return false;
-        },
-        'swiperight': function (event) {
-          config.$bookBlock.bookblock('prev');
-          return false;
-        }
-      });
-
-      // add keyboard events
-      $(document).keydown(function (e) {
-        var keyCode = e.keyCode || e.which,
-          arrow = {
-            left: 37,
-            up: 38,
-            right: 39,
-            down: 40
-          };
-
-        switch (keyCode) {
-          case arrow.left:
-            config.$bookBlock.bookblock('prev');
-            break;
-          case arrow.right:
+        slides.on({
+          'swipeleft': function (event) {
             config.$bookBlock.bookblock('next');
-            break;
-        }
+            return false;
+          },
+          'swiperight': function (event) {
+            config.$bookBlock.bookblock('prev');
+            return false;
+          }
+        });
       });
-    };
-
-  return { init: init };
-
+    }
+  }
 })();
 
 Page.init();

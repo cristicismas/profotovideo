@@ -1,26 +1,26 @@
-.bb-custom-wrapper {
+.album-wrapper {
 	position: relative;
 	margin: 0 auto 40px;
 	text-align: center;
 }
 
-.bb-bookblock img {
+.album img {
 	width: 1024px;
 	height: 512px;
 }
 
-.bb-custom-wrapper .bb-bookblock {
+.album-wrapper .album {
 	box-shadow: 0 12px 20px 20px rgba(17, 17, 17, 0.7);
 	border: 15px solid #fccf94;
 }
 
-.bb-custom-wrapper h3 {
+.album-wrapper h3 {
 	font-size: 1.4em;
 	font-weight: 300;
 	margin: 0.4em 0 1em;
 }
 
-.bb-custom-wrapper nav {
+.album-wrapper nav {
 	height: 0;
 	width: 100%;
 	margin: auto;
@@ -28,7 +28,7 @@
 	text-align: center;
 }
 
-.bb-custom-wrapper nav a {
+.album-wrapper nav a {
 	display: inline-block;
 	text-align: center;
 	border-radius: 2px;
@@ -41,15 +41,15 @@
 	cursor: pointer;
 }
 
-.bb-custom-wrapper nav {
+.album-wrapper nav {
 	z-index: 200;
 }
 
-.bb-custom-wrapper nav a:hover .arrow {
+.album-wrapper nav a:hover .arrow {
 	opacity: 0.9;
 }
 
-.bb-custom-wrapper nav a .arrow {
+.album-wrapper nav a .arrow {
 	opacity: 0.3;
 	transition: opacity .3s;
 	user-select: none;
@@ -59,89 +59,89 @@
 	top: 250px;
 }
 
-.bb-custom-wrapper #bb-nav-prev .arrow {
+.album-wrapper .prev .arrow {
 	content: url(../images/prev.png);
 	left: -270px;
 }
 
 
-.bb-custom-wrapper #bb-nav-next .arrow {
+.album-wrapper .next .arrow {
 	content: url(../images/next.png);
 	right: -270px;
 }
 
 /* No JS */
-.no-js .bb-custom-wrapper {
+.no-js .album-wrapper {
 	height: auto;
 }
 
-.no-js .bb-custom-content {
+.no-js .album-content {
 	height: 670px;
 }
 
 @media only screen and (max-width: 1200px) {
-	.bb-bookblock img {
+	.album img {
 		width: 740px;
 		height: 370px;
 	}
 
-	.bb-custom-wrapper nav a {
+	.album-wrapper nav a {
 		height: 430px;
 		width: 430px;
 		top: -400px;
 	}
 
-	.bb-custom-wrapper nav a .arrow {
+	.album-wrapper nav a .arrow {
 		top: 200px;
 	}
 
-	.bb-custom-wrapper #bb-nav-prev .arrow {
+	.album-wrapper .prev .arrow {
 		left: -200px;
 	}
 
-	.bb-custom-wrapper #bb-nav-next .arrow {
+	.album-wrapper .next .arrow {
 		right: -200px;
 	}
 }
 
 @media only screen and (max-width: 900px) {
-	.bb-bookblock img {
+	.album img {
 		width: 520px;
 		height: 260px;
 	}
 
-	.bb-custom-wrapper nav a {
+	.album-wrapper nav a {
 		height: 280px;
 		width: 300px;
 		top: -270px;
 	}
 
-	.bb-custom-wrapper nav a .arrow {
+	.album-wrapper nav a .arrow {
 		top: 120px;
 	}
 
-	.bb-custom-wrapper #bb-nav-prev .arrow {
+	.album-wrapper .prev .arrow {
 		left: -140px;
 	}
 
-	.bb-custom-wrapper #bb-nav-next .arrow {
+	.album-wrapper .next .arrow {
 		right: -140px;
 	}
 }
 
 @media only screen and (max-width: 640px) {
-	.bb-bookblock img {
+	.album img {
 		width: 100%;
 		height: 100%;
 	}
 
-	.bb-custom-wrapper nav a {
+	.album-wrapper nav a {
 		height: 50vw;
 		width: 45vw;
 		top: -45vw;
 	}
 
-	.bb-custom-wrapper nav a .arrow {
+	.album-wrapper nav a .arrow {
 		top: 120px;
 		display: none;
 	}
