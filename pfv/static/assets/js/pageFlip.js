@@ -3,9 +3,7 @@ var Page = (function () {
   var config = {
     $bookBlock: $('#bb-bookblock'),
     $navNext: $('#bb-nav-next'),
-    $navPrev: $('#bb-nav-prev'),
-    $navFirst: $('#bb-nav-first'),
-    $navLast: $('#bb-nav-last')
+    $navPrev: $('#bb-nav-prev')
   },
     init = function () {
       config.$bookBlock.bookblock({
@@ -27,16 +25,6 @@ var Page = (function () {
 
       config.$navPrev.on('click touchstart', function () {
         config.$bookBlock.bookblock('prev');
-        return false;
-      });
-
-      config.$navFirst.on('click touchstart', function () {
-        config.$bookBlock.bookblock('first');
-        return false;
-      });
-
-      config.$navLast.on('click touchstart', function () {
-        config.$bookBlock.bookblock('last');
         return false;
       });
 
