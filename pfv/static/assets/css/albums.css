@@ -10,7 +10,8 @@
 }
 
 .bb-custom-wrapper .bb-bookblock {
-	box-shadow: 0 12px 20px 20px rgba(17, 17, 17, 0.4);
+	box-shadow: 0 12px 20px 20px rgba(17, 17, 17, 0.7);
+	border: 15px solid #fccf94;
 }
 
 .bb-custom-wrapper h3 {
