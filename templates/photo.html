@@ -7,11 +7,7 @@
   {% for photo in photos %}
     <div class="zoom-container">
       <a href="{{ photo.url }}" data-lightbox="photo">
-        {% if photo.thumbnail %}
-          <img class="photo" src="{{ photo.thumbnail }}" alt="photo">
-        {% else %}
-          <img class="photo" src="{{ photo.url }}" alt="photo">
-        {% endif %}
+        <img class="photo" src="{{ photo.url }}" alt="photo">
       </a>
     </div>
   {% endfor%}
