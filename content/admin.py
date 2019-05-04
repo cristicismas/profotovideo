@@ -18,7 +18,7 @@ admin.site.register(Photo, PhotoAdmin)
 
 class VideoAdmin(admin.ModelAdmin):
     list_display = ('id', 'isFeatured', 'url')
-    list_display_links = ('id',)
+    list_display_links = ('id', 'url')
     list_editable = ('isFeatured',)
     list_filter = ('isFeatured',)
 
