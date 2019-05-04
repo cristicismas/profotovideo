@@ -5,9 +5,11 @@ from .models import Photo, Album, Video
 
 def index(request):
     photos = Photo.objects.all()
+    videos = Video.objects.all()
 
     context = {
-        'photos': photos
+        'photos': photos,
+        'videos': videos
     }
 
     return render(request, 'index.html', context)
