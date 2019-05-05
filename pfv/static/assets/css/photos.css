@@ -17,7 +17,7 @@
 
 .photos {
   width: 85%;
-  margin: auto;
+  margin: 0 auto 100px;
   column-count: 4;
   column-gap: 0px;
 }
