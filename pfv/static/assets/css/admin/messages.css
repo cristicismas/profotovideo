@@ -6,6 +6,15 @@
 }
 
 ul.messagelist li {
-  background: #3c963c url(../img/icon-yes.svg) 40px 12px no-repeat;
-  color: #000;
+  background: #006800 url(/static/admin/img/icon-yes.svg) 40px 12px no-repeat !important;
+  color: #eee;
+}
+
+ul.messagelist li a {
+  color: #ccc;
+}
+
+
+ul.messagelist li a:hover {
+  color: #f9f9f9;
 }
