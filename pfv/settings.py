@@ -25,7 +25,7 @@ SECRET_KEY = '6c%ob5o@moi^7(meng1st^h7pdal__h8dl&q+#!*^j7#kwocpy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['profotovideo.herokuapp.com']
 
 
 # Application definition
