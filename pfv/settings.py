@@ -17,6 +17,10 @@ ENV = os.getenv('ENV')
 
 DEBUG = False if ENV == 'PRODUCTION' else True
 SECURE_SSL_REDIRECT = True if ENV == 'PRODUCTION' else False
+SECURE_CONTENT_TYPE_NOSNIFF = True if ENV == 'PRODUCTION' else False
+SECURE_BROWSER_XSS_FILTER = True if ENV == 'PRODUCTION' else False
+CSRF_COOKIE_SECURE = True if ENV == 'PRODUCTION' else False
+SESSION_COOKIE_SECURE = True if ENV == 'PRODUCTION' else False
 
 ALLOWED_HOSTS = [os.getenv('ALLOWED_HOST')]
 
