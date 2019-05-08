@@ -16,6 +16,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 ENV = os.getenv('ENV')
 
 DEBUG = False if ENV == 'PRODUCTION' else True
+SECURE_SSL_REDIRECT = True if ENV == 'PRODUCTION' else False
 
 ALLOWED_HOSTS = [os.getenv('ALLOWED_HOST')]
 
