@@ -5,5 +5,5 @@ __pycache__/
 *.log
 *.pot
 *.pyc
-static/
+/static/
 .env
