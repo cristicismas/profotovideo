@@ -3,7 +3,7 @@
 {% block content %}
 <h2 class="title" id="photos-title">Fotografii</h2>
 
-<section class="photos">
+<section id="photos">
   {% for photo in photos %}
     <div class="zoom-container">
       <a href="{{ photo.url }}" data-lightbox="photo">
