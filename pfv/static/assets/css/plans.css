@@ -12,6 +12,7 @@
   border-radius: 5px;
   margin: 50px 30px;
   width: 270px;
+  min-height: 435px;
   transition: all 0.3s;
   position: relative;
   top: 0;
