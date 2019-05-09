@@ -41,6 +41,7 @@ iframe {
   iframe {
     height: 100%;
   }
+  
   .videos .video-carousel {
     margin-top: -100px;
   }
@@ -61,6 +62,7 @@ iframe {
     padding: 0 0 0 0 !important;
     margin: auto;
     margin-bottom: 50px;
+    margin-top: 120px;
   }
 
   .videos .video-carousel {
