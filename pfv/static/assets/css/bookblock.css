@@ -199,6 +199,6 @@
 @media only screen and (max-width: 640px) {
 	.album {
 		width: 90vw;
-		max-height: 40vw;
+		height: 45vw;
 	}
 }
