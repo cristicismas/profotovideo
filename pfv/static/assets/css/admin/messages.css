@@ -18,3 +18,9 @@ ul.messagelist li a {
 ul.messagelist li a:hover {
   color: #f9f9f9;
 }
+
+@media only screen and (max-width: 767px) {
+  ul.messagelist li {
+    padding-left: 60px !important;
+  }
+}
