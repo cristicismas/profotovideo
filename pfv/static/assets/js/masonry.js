@@ -2506,6 +2506,7 @@ var photos = $('#photos').imagesLoaded(function() {
   photos.masonry({
     itemSelector: '.zoom-container',
     columnWidth: 50,
+    gutter: 20,
     fitWidth: true
   });
 });
