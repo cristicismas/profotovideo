@@ -2510,15 +2510,3 @@ var photos = $('#photos').imagesLoaded(function() {
     fitWidth: true
   });
 });
-
-window.onresize = function() {
-  setTimeout(() => {
-    photos.masonry('destroy');
-    photos.masonry({
-      itemSelector: '.photo-container a',
-      columnWidth: 50,
-      gutter: 20,
-      fitWidth: true
-    });
-  }, 200);
-};
