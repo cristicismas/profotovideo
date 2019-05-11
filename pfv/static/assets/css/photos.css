@@ -39,6 +39,14 @@
 }
 
 @media only screen and (max-width: 420px) {
+  .photo-container a {
+    margin: 0 10px 5px;
+  }
+
+  #photos {
+    width: 95%;
+  }
+
   #photos .photo {
     width: 100%;
   }

@@ -2512,5 +2512,13 @@ var photos = $('#photos').imagesLoaded(function() {
 });
 
 window.onresize = function() {
-  photos.masonry('reloadItems');
+  setTimeout(() => {
+    photos.masonry('destroy');
+    photos.masonry({
+      itemSelector: '.photo-container a',
+      columnWidth: 50,
+      gutter: 20,
+      fitWidth: true
+    });
+  }, 200);
 };
