@@ -15,7 +15,7 @@ var Page = (function () {
         });
 
         nav.each(function(i) {
-          $(this).on('click touchstart', function () {
+          $(this).on('click', function () {
             if ($(this).context.className == 'next') {
               bb.bookblock('next');
             } else {
