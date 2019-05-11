@@ -2504,7 +2504,7 @@ return Outlayer;
 
 var photos = $('#photos').imagesLoaded(function() {
   photos.masonry({
-    itemSelector: '.zoom-container',
+    itemSelector: '.photo-container a',
     columnWidth: 50,
     gutter: 20,
     fitWidth: true

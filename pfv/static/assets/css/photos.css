@@ -1,13 +1,18 @@
-.zoom-container {
+.photo-container {
   position: relative;
+  margin: 0 20px 20px;
+}
+
+.photo-container a {
+  display: block;
   overflow: hidden;
-  margin: 0 20px 40px;
   border: 2px solid;
+  margin: 0 20px 20px;
   border-radius: 5px;
 }
 
 .photo {
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .photo:hover {
