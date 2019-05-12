@@ -4,7 +4,7 @@ from .models import Photo, Album, Video
 
 
 def index(request):
-    photos = Photo.objects.all()
+    photos = Photo.objects.filter(isFeatured=True)
     videos = Video.objects.all()
 
     context = {

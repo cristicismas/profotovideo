@@ -16,13 +16,11 @@
 
 <section id="photos">
   {% for photo in photos %}
-    {% if photo.isFeatured %}
-      <div class="photo-container">
-        <a href="{{ photo.url }}" data-lightbox="photo">
-          <img class="photo" src="{{ photo.url }}" alt="photo">
-        </a>
-      </div>
-    {% endif %}
+    <div class="photo-container">
+      <a href="{{ photo.url }}" data-lightbox="photo">
+        <img class="photo" src="{{ photo.url }}" alt="photo">
+      </a>
+    </div>
   {% endfor %}
 </section>
 
