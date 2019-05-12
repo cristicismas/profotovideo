@@ -2509,4 +2509,29 @@ var photos = $('#photos').imagesLoaded(function() {
     gutter: 20,
     fitWidth: true
   });
+
+  if (window.innerWidth < 700) {
+    photos.masonry('destroy');
+  }
+
+  var lastWidth = window.innerWidth;
+
+  $(window).on('resize', function() {
+    if ($(window).width() < 710 && lastWidth >= 700) {
+      photos.masonry('destroy');
+    } else if (lastWidth < 710 && $(window).width() >= 700) {
+      photos.masonry({
+        itemSelector: '.photo-container a',
+        columnWidth: 50,
+        gutter: 20,
+        fitWidth: true
+      });
+
+      setTimeout(() => {
+        photos.masonry('layout');
+      }, 200);
+    }
+
+    lastWidth = $(window).width();
+  })
 });
