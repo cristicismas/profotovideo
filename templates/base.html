@@ -10,16 +10,11 @@
 
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
 
-  <link rel="stylesheet" href="{% static 'assets/css/carousel.min.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+  {% block extrastyles %} {% endblock %}
+  
   <link rel="stylesheet" href="{% static 'assets/css/global.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/header.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/css/photos.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/css/videos.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/css/plans.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/css/albums.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/footer.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/css/bookblock.css' %}">
 </head>
 <body>
   <header>
@@ -52,22 +47,11 @@
       </div>
     </div>
   </footer>
-
-  <script src="{% static 'assets/js/carousel.min.js'%}"></script>
-  <script src="{% static 'assets/js/lightbox-plus-jquery.min.js'%}"></script>
-
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="{% static 'assets/js/modernizr.custom.js'%}"></script>
-  <script src="{% static 'assets/js/jquerypp.custom.js'%}"></script>
-  <script src="{% static 'assets/js/jquery.bookblock.min.js'%}"></script>
-	
-	<script src="{% static 'assets/js/pageFlip.js'%}"></script>
 
-  <script src="{% static 'assets/js/imagesloaded.min.js'%}"></script>
-  <script src="{% static 'assets/js/masonry.js'%}"></script>
+  {% block extrascripts %} {% endblock %}
 
   <script src="{% static 'assets/js/index.js'%}"></script>
-
-  <script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 </html>

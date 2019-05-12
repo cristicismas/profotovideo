@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extrastyles %}
+  <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/photos.css' %}">
+{% endblock %}
 
 {% block content %}
 <h2 class="title" id="photos-title">Fotografii</h2>
@@ -13,3 +19,9 @@
   {% endfor%}
 </section>
 {% endblock %}
+
+{% block extrascripts %}
+  <script src="{% static 'assets/js/lightbox-plus-jquery.min.js'%}"></script>
+  <script src="{% static 'assets/js/imagesloaded.min.js'%}"></script>
+  <script src="{% static 'assets/js/masonry.js'%}"></script>
+{% endblock extrascripts %}

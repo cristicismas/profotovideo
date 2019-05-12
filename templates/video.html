@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extrastyles %}
+  <link rel="stylesheet" href="{% static 'assets/css/carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/videos.css' %}">
+{% endblock %}
 
 {% block content %}
 <h2 class="title" id="videos-title">Videoclipuri</h2>
@@ -11,3 +17,8 @@
   </div>
 </section>
 {% endblock %}
+
+{% block extrascripts %}
+  <script src="{% static 'assets/js/carousel.min.js'%}"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+{% endblock extrascripts %}

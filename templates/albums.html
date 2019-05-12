@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extrastyles %}
+  <link rel="stylesheet" href="{% static 'assets/css/albums.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/bookblock.css' %}">
+{% endblock %}
+
 {% block content %}
 <h2 class="title">Albume</h2>
 
@@ -22,3 +27,10 @@
   {% endfor %}
 </section>
 {% endblock content %}
+
+{% block extrascripts %}
+  <script src="{% static 'assets/js/modernizr.custom.js'%}"></script>
+  <script src="{% static 'assets/js/jquerypp.custom.js'%}"></script>
+  <script src="{% static 'assets/js/jquery.bookblock.min.js'%}"></script>
+  <script src="{% static 'assets/js/pageFlip.js'%}"></script>
+{% endblock extrascripts %}

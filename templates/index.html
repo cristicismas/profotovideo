@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extrastyles %}
+  <link rel="stylesheet" href="{% static 'assets/css/videos.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/photos.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/plans.css' %}">
+{% endblock %}
 
 {% block content %}
 
@@ -73,4 +81,11 @@
     <p>1x stick USB de 64GB</p>
   </div>
 </section>
+{% endblock %}
+
+{% block extrascripts %}
+  <script src="{% static 'assets/js/lightbox-plus-jquery.min.js'%}"></script>
+  <script src="{% static 'assets/js/imagesloaded.min.js'%}"></script>
+  <script src="{% static 'assets/js/masonry.js'%}"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
 {% endblock %}
