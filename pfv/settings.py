@@ -27,7 +27,7 @@ CSRF_COOKIE_SECURE = True if ENV == 'PRODUCTION' else False
 SESSION_COOKIE_SECURE = True if ENV == 'PRODUCTION' else False
 
 
-ALLOWED_HOSTS = [os.getenv('ALLOWED_HOST')]
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(', ')
 
 
 # Application definition
