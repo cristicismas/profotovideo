@@ -23,9 +23,29 @@
     <a href="{% url 'index' %}"><h1>ProFotoVideo</h1></a> 
     
     <nav>
-      <li><a href="{% url 'photo' %}">Foto</a></li>
-      <li><a href="{% url 'video' %}">Video</a></li>
-      <li><a href="{% url 'albums' %}">Albume</a></li>
+      <li>
+        <a 
+        {% if 'photo' in request.path %}
+          class="active"
+        {% endif %}
+        href="{% url 'photo' %}">Foto</a>
+      </li>
+
+      <li>
+        <a 
+        {% if 'video' in request.path %}
+          class="active"
+        {% endif %}
+        href="{% url 'video' %}">Video</a>
+      </li>
+
+      <li>
+        <a 
+        {% if 'albums' in request.path %}
+          class="active"
+        {% endif %}
+        href="{% url 'albums' %}">Albume</a>
+      </li>
     </nav>
   </header>
   

@@ -40,6 +40,12 @@ header nav a {
   left: -70px;
 }
 
+header nav .active:after {
+  width: 100%;
+  left: 0;
+  background: #008cff;
+}
+
 header nav a:after {
   content: "";
   position: absolute;
