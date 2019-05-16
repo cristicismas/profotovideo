@@ -150,7 +150,21 @@ body {
 	}
 
 	.album-wrapper nav a .arrow {
-		top: 120px;
-		display: none;
+		top: 26vw;
+		opacity: 1;
+	}
+
+	.album-wrapper .prev .arrow {
+		left: -85px;
+	}
+
+	.album-wrapper .next .arrow {
+		right: -85px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.album-wrapper nav a .arrow {
+		top: 22vw;
 	}
 }
