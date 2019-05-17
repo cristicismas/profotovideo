@@ -2539,5 +2539,9 @@ $(window).on('resize', function() {
 window.lazySizesConfig = window.lazySizesConfig || {};
 
 $(document).on('lazyloaded', function() {
+  $('#photos .photo.lazyloaded').each(function() {
+    $(this).parent().css({ opacity: 1 });
+  });
+
   photos.masonry('layout');
 });
