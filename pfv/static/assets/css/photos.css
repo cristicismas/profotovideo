@@ -6,8 +6,6 @@
 .photo-container a {
   display: block;
   overflow: hidden;
-  opacity: 0;
-  transition: opacity .5s;
   border: 2px solid;
   margin: 0 auto 20px;
   border-radius: 5px;
@@ -15,6 +13,8 @@
 
 .photo {
   transform: scale(1.07);
+  opacity: 0;
+  transition: opacity .5s;
 }
 
 .photo:hover {
