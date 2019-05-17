@@ -13,16 +13,18 @@ ProFotoVideo | Video
 {% block content %}
 <h2 class="title" id="videos-title">Videoclipuri</h2>
 
-<section class="videos">
-  <div class="video-carousel">
+<section id="videos">
+  <div id="video-carousel">
     {% for video in videos %}
-      <iframe src="{{ video.url }}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <iframe data-src="{{ video.url }}" class="video lazyload" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     {% endfor %}
   </div>
 </section>
 {% endblock %}
 
 {% block extrascripts %}
-  <script src="{% static 'assets/js/carousel.min.js'%}"></script>
   <script src="https://player.vimeo.com/api/player.js"></script>
+  <script src="{% static 'assets/js/carousel.min.js'%}"></script>
+  <script src="{% static 'assets/js/lazysizes.min.js'%}"></script>
+  <script src="{% static 'assets/js/videos.js'%}"></script>
 {% endblock extrascripts %}

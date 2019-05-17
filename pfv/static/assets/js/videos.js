@@ -1,4 +1,4 @@
-const carousel = document.querySelector(".video-carousel");
+const carousel = document.querySelector("#video-carousel");
 
 if (carousel) {
   var flkty = new Flickity(carousel, {

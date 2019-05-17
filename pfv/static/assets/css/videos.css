@@ -15,19 +15,19 @@ iframe {
   top: 80px;
 }
 
-.videos .video-carousel {
+#videos #video-carousel {
   height: 70vh;
   width: 95vw;
   margin: auto;
 }
 
-.videos .carousel-cell {
+#videos .carousel-cell {
   width: 50vw;
   margin-right: 50px;
   counter-increment: carousel-cell;
 }
 
-.videos iframe {
+#videos iframe {
   position: static;
   display: block;
   width: 90vw;
@@ -42,7 +42,7 @@ iframe {
     height: 100%;
   }
   
-  .videos .video-carousel {
+  #videos #video-carousel {
     margin-top: -100px;
   }
 }
@@ -57,37 +57,37 @@ iframe {
     top: 0px;
   }
 
-  .videos iframe {
+  #videos iframe {
     height: 300px;
     padding: 0 0 0 0 !important;
     margin: auto;
     margin-bottom: 50px;
   }
 
-  .videos .video-carousel {
+  #videos #video-carousel {
     height: 100%;
     margin-top: 20px;
   }
 }
 
 @media only screen and (max-width: 550px) {
-  .videos iframe {
+  #videos iframe {
     margin-bottom: 0;
   }
 
-  .videos .video-carousel {
+  #videos #video-carousel {
     margin-top: -40px;
   }
 }
 
 @media only screen and (max-width: 450px) {
-  .videos iframe {
+  #videos iframe {
     margin-bottom: -50px;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .videos iframe {
+  #videos iframe {
     margin-bottom: -90px;
   }
 }
