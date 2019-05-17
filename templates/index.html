@@ -30,7 +30,7 @@ ProFotoVideo
   {% for photo in photos %}
     <div class="photo-container">
       <a href="{{ photo.url }}" data-lightbox="photo">
-        <img class="photo" src="{{ photo.url }}" alt="photo">
+        <img class="photo lazyload" data-src="{{ photo.url }}" alt="photo">
       </a>
     </div>
   {% endfor %}
@@ -89,7 +89,7 @@ ProFotoVideo
 
 {% block extrascripts %}
   <script src="{% static 'assets/js/lightbox-plus-jquery.min.js'%}"></script>
-  <script src="{% static 'assets/js/imagesloaded.min.js'%}"></script>
+  <script src="{% static 'assets/js/lazysizes.min.js'%}"></script>
   <script src="{% static 'assets/js/masonry.js'%}"></script>
   <script src="https://player.vimeo.com/api/player.js"></script>
 {% endblock %}
