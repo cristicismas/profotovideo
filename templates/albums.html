@@ -15,6 +15,7 @@ ProFotoVideo | Albume
 
 <section id="albums">
   {% for album in albums %}
+    <h3 class="album-title">{{ album.title }}</h3>
     <div class="album-wrapper">
       <div class="album">
         {% for slide in album.album_slides %}

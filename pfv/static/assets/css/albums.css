@@ -4,8 +4,12 @@ body {
 
 .album-wrapper {
 	position: relative;
-	margin: 0 auto 160px;
+	margin: 0 auto 100px;
 	text-align: center;
+}
+
+.album-wrapper:last-of-type {
+	margin-bottom: 160px;
 }
 
 .album img {
@@ -13,16 +17,15 @@ body {
 	height: 512px;
 }
 
+.album-title {
+	text-align: center;
+	font-size: 25px;
+}
+
 .album-wrapper .album {
 	box-shadow: 0 12px 20px 20px rgba(17, 17, 17, 0.7);
 	border: 15px solid #dedede;
 	border-radius: 5px;
-}
-
-.album-wrapper h3 {
-	font-size: 1.4em;
-	font-weight: 300;
-	margin: 0.4em 0 1em;
 }
 
 .album-wrapper nav {
