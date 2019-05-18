@@ -20,6 +20,7 @@ body {
 .album-title {
 	text-align: center;
 	font-size: 25px;
+	font-weight: normal;
 }
 
 .album-wrapper .album {
