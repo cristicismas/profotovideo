@@ -156,7 +156,11 @@ body {
 
 	.album-wrapper nav a .arrow {
 		top: 26vw;
-		opacity: 1;
+		opacity: .5;
+	}
+
+	.album-wrapper nav a:hover .arrow {
+		opacity: .5;
 	}
 
 	.album-wrapper .prev .arrow {
