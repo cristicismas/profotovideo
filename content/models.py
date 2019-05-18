@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.safestring import mark_safe
 
 
 class Album(models.Model):
@@ -15,6 +16,9 @@ class Album(models.Model):
 class Photo(models.Model):
     url = models.URLField(max_length=200, unique=True)
     isFeatured = models.BooleanField(default=False)
+
+    def preview(self):
+        return mark_safe('<img src="%s" class="image-preview" />' % self.url)
 
     def __str__(self):
         return self.url

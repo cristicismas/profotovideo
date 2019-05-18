@@ -85,3 +85,7 @@ a.button {
   background: #191919 !important;
   border-bottom: none !important;
 }
+
+.image-preview {
+  max-height: 300px;
+}
