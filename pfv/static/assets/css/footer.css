@@ -16,13 +16,13 @@ footer .contacts {
 
 footer .contacts a {
   color: #ccc;
-  border-bottom: 2px dashed #888;
+  border-bottom: 2px solid #888;
   padding-bottom: 5px;
   transition: all .2s;
 }
 
 footer .contacts a:hover {
-  border-bottom: 2px dashed #ccc;
+  border-bottom: 2px solid #ccc;
   color: #fff;
 }
 
