@@ -15,7 +15,7 @@ body {
 
 .album-wrapper .album {
 	box-shadow: 0 12px 20px 20px rgba(17, 17, 17, 0.7);
-	border: 15px solid #fff;
+	border: 15px solid #dedede;
 	border-radius: 5px;
 }
 
@@ -141,7 +141,7 @@ body {
 	}
 
 	.album-wrapper .album {
-		border: 10px solid #fff;
+		border: 10px solid #dedede;
 		border-radius: 5px;
 	}
 
