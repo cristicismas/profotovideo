@@ -15,7 +15,8 @@ body {
 
 .album-wrapper .album {
 	box-shadow: 0 12px 20px 20px rgba(17, 17, 17, 0.7);
-	border: 15px solid #fccf94;
+	border: 15px solid #fff;
+	border-radius: 5px;
 }
 
 .album-wrapper h3 {
@@ -140,7 +141,8 @@ body {
 	}
 
 	.album-wrapper .album {
-		border: 10px solid #fccf94;
+		border: 10px solid #fff;
+		border-radius: 5px;
 	}
 
 	.album-wrapper nav a {
