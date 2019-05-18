@@ -13,7 +13,7 @@ class Album(models.Model):
 
 
 class Photo(models.Model):
-    url = models.URLField(max_length=200)
+    url = models.URLField(max_length=200, unique=True)
     isFeatured = models.BooleanField(default=False)
 
     def __str__(self):
@@ -21,7 +21,7 @@ class Photo(models.Model):
 
 
 class Video(models.Model):
-    url = models.URLField(max_length=200)
+    url = models.URLField(max_length=200, unique=True)
     isFeatured = models.BooleanField(default=False)
     
     def save(self, *args, **kwargs):
