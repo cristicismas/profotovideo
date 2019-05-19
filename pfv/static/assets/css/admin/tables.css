@@ -7,3 +7,11 @@
   background: #222 !important;
   border-left: 1px solid #aaa !important;
 }
+
+thead th a:link, thead th a:visited {
+  color: #ddd !important;
+}
+
+table thead th .text a:focus, table thead th .text a:hover {
+  background: #0f80ad !important;
+}

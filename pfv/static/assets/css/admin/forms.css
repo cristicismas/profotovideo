@@ -86,6 +86,10 @@ a.button {
   border-bottom: none !important;
 }
 
+.vCheckboxLabel {
+  color: #ccc;
+}
+
 .image-preview {
   max-height: 300px;
 }
