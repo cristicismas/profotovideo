@@ -29,22 +29,6 @@ SESSION_COOKIE_SECURE = True if ENV == 'PRODUCTION' else False
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(', ')
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
-        },
-    },
-}
-
 # Application definition
 
 INSTALLED_APPS = [
