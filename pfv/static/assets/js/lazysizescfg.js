@@ -1,0 +1,1 @@
+window.lazySizesConfig = { preloadAfterLoad: true, expand: 1000, expFactor: 3, loadMode: 3 };

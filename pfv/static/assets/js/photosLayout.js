@@ -1,4 +1,3 @@
-window.lazySizesConfig = window.lazySizesConfig || {};
 photos = $('#photos');
 
 photos.masonry({
@@ -36,8 +35,6 @@ $(window).on('resize', function() {
 
   lastWidth = $(window).width();
 });
-
-lazySizesConfig.preloadAfterLoad = true;
 
 $(document).on('lazyloaded', function() {
   $('#photos .photo.lazyloaded').each(function() {
