@@ -1,3 +1,4 @@
+window.lazySizesConfig = window.lazySizesConfig || {};
 photos = $('#photos');
 
 photos.masonry({
@@ -7,15 +8,18 @@ photos.masonry({
   fitWidth: true
 });
 
+var lastWidth = window.innerWidth;
+var isMasonryActive = true;
+
 if (window.innerWidth < 700) {
   photos.masonry('destroy');
+  isMasonryActive = false;
 }
 
-var lastWidth = window.innerWidth;
-
 $(window).on('resize', function() {
-  if ($(window).width() < 710 && lastWidth >= 700) {
+  if ($(window).width() < 710 && lastWidth >= 700 && isMasonryActive) {
     photos.masonry('destroy');
+    isMasonryActive = false;
   } else if (lastWidth < 710 && $(window).width() >= 700) {
     photos.masonry({
       itemSelector: '.photo-container a',
@@ -25,6 +29,7 @@ $(window).on('resize', function() {
     });
 
     setTimeout(() => {
+      isMasonryActive = true;
       photos.masonry('layout');
     }, 200);
   }
@@ -32,12 +37,14 @@ $(window).on('resize', function() {
   lastWidth = $(window).width();
 });
 
-window.lazySizesConfig = window.lazySizesConfig || {};
+lazySizesConfig.preloadAfterLoad = true;
 
 $(document).on('lazyloaded', function() {
   $('#photos .photo.lazyloaded').each(function() {
     $(this).css({ opacity: 1 });
   });
 
-  photos.masonry('layout');
+  if (isMasonryActive) {
+    photos.masonry('layout');
+  }
 });
