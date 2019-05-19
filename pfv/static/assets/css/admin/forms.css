@@ -89,3 +89,9 @@ a.button {
 .image-preview {
   max-height: 300px;
 }
+
+@media only screen and (max-width: 600px) {
+  .image-preview {
+    max-width: 100%;
+  }
+}
