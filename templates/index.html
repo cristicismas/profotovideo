@@ -7,9 +7,11 @@ ProFotoVideo | Fotografii, filmari si albume pentru nunti, botezuri, etc.
 
 {% block extrastyles %}
   <link rel="stylesheet" href="{% static 'assets/css/videos.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/photos.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/plans.css' %}">
+  
+  <link rel="stylesheet" href="{% static 'assets/css/photoswipe.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/photoswipe-skin.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -26,10 +28,10 @@ ProFotoVideo | Fotografii, filmari si albume pentru nunti, botezuri, etc.
 
 <h2 class="title">Fotografii</h2>
 
-<section id="photos">
+<section id="photos" data-pswp>
   {% for photo in photos %}
     <div class="photo-container">
-      <a href="{{ photo.url }}" data-lightbox="photo">
+      <a href="{{ photo.url }}">
         <img class="photo lazyload" data-src="{{ photo.url }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="photo">
       </a>
     </div>
@@ -90,8 +92,11 @@ ProFotoVideo | Fotografii, filmari si albume pentru nunti, botezuri, etc.
 {% block extrascripts %}
   <script src="{% static 'assets/js/lazysizescfg.js'%}"></script>
   <script src="{% static 'assets/js/lazysizes.min.js'%}"></script>
-  <script src="{% static 'assets/js/lightbox.min.js'%}"></script>
   <script src="{% static 'assets/js/masonry.min.js'%}"></script>
   <script src="{% static 'assets/js/photosLayout.js'%}"></script>
+  <script src="{% static 'assets/js/photoswipe.min.js'%}"></script>
+  <script src="{% static 'assets/js/photoswipe-ui-default.min.js'%}"></script>
+  <script src="{% static 'assets/js/photoswipe-simplify.min.js'%}"></script>
+  <script src="{% static 'assets/js/photoswipe-init.js'%}"></script>
   <script src="https://player.vimeo.com/api/player.js"></script>
 {% endblock %}
