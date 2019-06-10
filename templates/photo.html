@@ -8,8 +8,8 @@ ProFotoVideo | Fotografii
 {% block extrastyles %}
   <link rel="stylesheet" href="{% static 'assets/css/photos.css' %}">
 
-  <link rel="stylesheet" href="{% static 'assets/css/photoswipe.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/css/photoswipe-skin.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/vendor/photoswipe.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/vendor/photoswipe-skin.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -28,11 +28,13 @@ ProFotoVideo | Fotografii
 
 {% block extrascripts %}
   <script src="{% static 'assets/js/lazysizescfg.js'%}"></script>
-  <script src="{% static 'assets/js/lazysizes.min.js'%}"></script>
-  <script src="{% static 'assets/js/photoswipe.min.js'%}"></script>
-  <script src="{% static 'assets/js/photoswipe-ui-default.min.js'%}"></script>
-  <script src="{% static 'assets/js/photoswipe-simplify.min.js'%}"></script>
+  <script src="{% static 'assets/js/vendor/lazysizes.min.js'%}"></script>
+
+  <script src="{% static 'assets/js/vendor/photoswipe.min.js'%}"></script>
+  <script src="{% static 'assets/js/vendor/photoswipe-ui-default.min.js'%}"></script>
+  <script src="{% static 'assets/js/vendor/photoswipe-simplify.min.js'%}"></script>
   <script src="{% static 'assets/js/photoswipe-init.js'%}"></script>
-  <script src="{% static 'assets/js/masonry.min.js'%}"></script>
+
+  <script src="{% static 'assets/js/vendor/masonry.min.js'%}"></script>
   <script src="{% static 'assets/js/photosLayout.js'%}"></script>
 {% endblock extrascripts %}

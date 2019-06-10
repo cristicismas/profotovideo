@@ -6,7 +6,7 @@ ProFotoVideo | Video
 {% endblock title %}
 
 {% block extrastyles %}
-  <link rel="stylesheet" href="{% static 'assets/css/carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/vendor/carousel.min.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/videos.css' %}">
 {% endblock %}
 
@@ -23,8 +23,11 @@ ProFotoVideo | Video
 {% endblock %}
 
 {% block extrascripts %}
-  <script src="{% static 'assets/js/lazysizes.min.js'%}"></script>
+  <script src="{% static 'assets/js/lazysizescfg.js'%}"></script>
+  <script src="{% static 'assets/js/vendor/lazysizes.min.js'%}"></script>
+  
   <script src="https://player.vimeo.com/api/player.js"></script>
-  <script src="{% static 'assets/js/carousel.min.js'%}"></script>
+  
+  <script src="{% static 'assets/js/vendor/carousel.min.js'%}"></script>
   <script src="{% static 'assets/js/videos.js'%}"></script>
 {% endblock extrascripts %}
