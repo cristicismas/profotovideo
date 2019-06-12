@@ -1,4 +1,5 @@
-.required label, label.required {
+.required label,
+label.required {
   color: #ccc !important;
 }
 
@@ -32,7 +33,7 @@ textarea {
   color: #bbb !important;
 }
 
-#changelist #toolbar form input[type="submit"] {
+#changelist #toolbar form input[type='submit'] {
   background: #191919 !important;
 }
 
@@ -47,12 +48,26 @@ textarea {
   color: #eee !important;
 }
 
-.button, 
-input[type="submit"], 
-input[type="button"], 
-.submit-row input, 
+.button,
+input[type='submit'],
+input[type='button'],
+.submit-row input,
 a.button {
   background: #2370b8 !important;
+}
+
+.delete-confirmation form input[type='submit'],
+.delete-confirmation form input[type='submit']:active,
+.delete-confirmation form input[type='submit']:focus,
+.delete-confirmation form input[type='submit']:hover {
+  background: #ac0000 !important;
+}
+
+.delete-confirmation form .cancel-link {
+  background-color: transparent;
+  background: transparent !important;
+  border: 1px solid #2370b8;
+  color: #2370b8;
 }
 
 .submit-row input.default {
