@@ -19,7 +19,7 @@ class Photo(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def preview(self):
-        return mark_safe('<img src="%s" class="image-preview" />' % self.url)
+        return mark_safe('<a href="%s"><img src="%s" class="image-preview" /></a>' % (self.url, self.url))
 
     def __str__(self):
         return self.url
