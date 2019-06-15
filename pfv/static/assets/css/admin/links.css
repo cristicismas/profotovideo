@@ -54,3 +54,24 @@ a.selector-clearall {
 ul.messagelist li a {
   color: #333;
 }
+
+.paginator a:link, .paginator a:visited {
+  background: #333 !important;
+}
+
+.paginator a:focus, .paginator a:hover {
+  background: #2768e0 !important;
+}
+
+.paginator .this-page {
+  background: #222 !important;
+  color: #eee !important;
+}
+
+.paginator a.showall {
+  background: none !important;
+}
+
+.paginator a.showall:focus, .paginator a.showall:hover {
+  color: #2768e0 !important;
+}
