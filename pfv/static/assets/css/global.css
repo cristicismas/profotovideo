@@ -47,3 +47,13 @@ li {
   transform: skew(-5deg) scale(1.4);
   text-shadow: 12px 12px 10px #111;
 }
+
+@media only screen and (max-width: 710px) {
+  .title {
+    text-shadow: 12px 12px 10px #111;
+  }
+
+  .title:hover {
+    transform: none;
+  }
+}
