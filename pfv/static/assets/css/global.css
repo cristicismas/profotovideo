@@ -31,12 +31,16 @@ li {
   list-style-type: none;
 }
 
+hr {
+  width: 70vw;
+}
+
 .title {
   text-align: center;
   cursor: default;
   display: block;
   width: 200px;
-  margin: 40px auto;
+  margin: 160px auto 100px;
   font-weight: normal;
   font-size: 30px;
   text-shadow: 5px 5px 5px #111;
