@@ -15,7 +15,7 @@ var Page = (function () {
 
         nav.each(function(i) {
           $(this).on('click', function () {
-            if ($(this).context.className == 'next') {
+            if ($(this).hasClass('next')) {
               bb.bookblock('next');
             } else {
               bb.bookblock('prev');
