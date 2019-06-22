@@ -3,5 +3,12 @@
   <li>
     <a href="{% url 'shuffle' %}" class="grp-state-focus">Shuffle</a>
   </li>
+
   {{ block.super }}
+
+  {% if 'photo' in request.path %}
+  <li>
+    <a href="{% url 'add_photos' %}" class="grp-state-focus addlink">Add Multiple Photos</a>
+  </li>
+  {% endif %}
 {% endblock %}

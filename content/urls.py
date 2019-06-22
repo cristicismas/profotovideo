@@ -7,5 +7,6 @@ urlpatterns = [
     path('photo', views.photos, name='photo'),
     path('video', views.videos, name='video'),
     path('albums', views.albums, name='albums'),
-    path('shuffle', views.shuffle, name='shuffle')
+    path('admin/shuffle', views.shuffle, name='shuffle'),
+    path('admin/content/photo/add_photos', views.add_photos, name='add_photos')
 ]

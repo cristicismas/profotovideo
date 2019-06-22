@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.contrib.admin.views.decorators import staff_member_required
-from django.http import HttpResponseRedirect
+from django.contrib import admin
+from django.contrib import messages
+from django.http import HttpResponseRedirect, HttpResponse
 
+from .forms import MultiplePhotosForm
 from .models import Photo, Album, Video
 
 
@@ -64,3 +67,55 @@ def shuffle(request):
         current_object.save()
 
     return HttpResponseRedirect(request_origin)
+
+
+# Add this to get site meta for the add_photos context
+class MyAdminSite(admin.AdminSite):
+    pass
+
+
+@staff_member_required
+def add_photos(request):
+    form = MultiplePhotosForm()
+    mysite = MyAdminSite()
+
+    context = {
+        'form': form,
+        'opts': Photo._meta,
+        'user': request.user,
+        'site_header': mysite.site_header,
+        'has_permission': mysite.has_permission(request),
+        'site_url': mysite.site_url,
+        'change': False,
+        'add': True,
+        'is_popup': False,
+        'save_as': False,
+        'has_delete_permission': True,
+        'has_add_permission': True,
+        'has_change_permission': True,
+        'has_view_permission': True,
+        'has_editable_inline_admin_formsets': True
+    }
+
+    if request.method == 'POST':
+        form = MultiplePhotosForm(request.POST)
+
+        if form.is_valid():
+            photoURLs = request.POST['photos'].split('\n')
+
+            photosToCreate = []
+
+            for url in photoURLs:
+                photosToCreate.append(Photo(url=url))
+
+            Photo.objects.bulk_create(photosToCreate, ignore_conflicts=True)
+
+            messages.success(request, 'Photos added successfully.')
+            return HttpResponseRedirect('/admin/content/photo')
+
+        # Add the validated form to context to get validation errors
+        context['form'] = form
+
+        return render(request, 'admin/multiple_photos_form.html', context)
+    else:
+        return render(request, 'admin/multiple_photos_form.html', context)
