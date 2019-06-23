@@ -10,11 +10,11 @@ from .models import Photo, Album, Video
 
 def index(request):
     photos = Photo.objects.filter(isFeatured=True)
-    videos = Video.objects.all()
+    video = Video.objects.get(isFeatured=True)
 
     context = {
         'photos': photos,
-        'videos': videos
+        'video': video
     }
 
     return render(request, 'index.html', context)

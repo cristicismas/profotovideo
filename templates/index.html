@@ -23,11 +23,7 @@ ProFotoVideo | Fotografii, filmari si albume pentru nunti, botezuri, etc.
     <div class="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis efficitur lorem, lacinia sollicitudin eros. Cras leo nulla, malesuada eget sollicitudin sed, finibus quis felis.</div>
     
     <div class="hero-video">
-      {% for video in videos %}
-        {% if video.isFeatured %}
-          <iframe src="{{ video.url }}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        {% endif %}
-      {% endfor %}
+      <iframe src="{{ video.url }}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
   </div>
 </section>
