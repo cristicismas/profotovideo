@@ -87,13 +87,13 @@ def add_photos(request):
         'has_permission': mysite.has_permission(request),
         'site_url': mysite.site_url,
         'change': False,
-        'add': True,
+        'add': False,
         'is_popup': False,
-        'save_as': False,
+        'save_as': True,
         'has_delete_permission': True,
         'has_add_permission': True,
         'has_change_permission': True,
-        'has_view_permission': True,
+        'has_view_permission': False,
         'has_editable_inline_admin_formsets': True
     }
 
