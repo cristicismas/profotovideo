@@ -10,6 +10,10 @@ body.login {
   background: #111 !important;
 }
 
+* {
+  transition: all .1s;
+}
+
 #container {
   background-color: #111;
 }
