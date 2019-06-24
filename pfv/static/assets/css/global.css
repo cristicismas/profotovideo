@@ -32,12 +32,16 @@ li {
   list-style-type: none;
 }
 
-hr {
+.hr {
   width: 70vw;
+  height: 2px;
+  background-color: #999;
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-hr::after {
+.hr::after {
   content: '';
   height: 30px;
   width: 2px;
