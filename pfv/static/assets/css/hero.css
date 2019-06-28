@@ -51,12 +51,11 @@
 
 @media only screen and (max-width: 1000px) {
   #hero {
-    margin: 130px auto;
+    margin: 80px auto 130px auto;
   }
 
   #hero #hero-title {
-    font-size: 30px;
-    margin-bottom: 0;
+    display: none;
   }
 
   #hero #hero-info {
@@ -70,7 +69,7 @@
   }
 
   #hero #hero-info .hero-video {
-    width: 100vw;
+    width: 99vw;
     margin: 50px auto;
   }
 
@@ -82,14 +81,14 @@
 
 @media only screen and (max-width: 700px) {
   #hero {
-    margin: 50px auto;
+    margin: -64px auto 30px auto;
   }
 
   #hero #hero-info .hero-description {
     width: 70%;
     border: none;
     text-align: center;
-    padding: 20px 0;
+    padding: 0;
   }
 
   #hero #hero-info .hero-video iframe {
