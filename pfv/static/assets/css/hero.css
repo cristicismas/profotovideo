@@ -1,6 +1,7 @@
 #hero {
   position: relative;
   margin: 200px auto;
+  z-index: 2;
 }
 
 #hero #hero-title {
