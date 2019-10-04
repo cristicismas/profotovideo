@@ -5,9 +5,13 @@ from django.utils.safestring import mark_safe
 class Album(models.Model):
     title = models.CharField(max_length=200)
     slides = models.TextField()
+    updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ['-updated']
 
     def album_slides(self):
         return self.slides.split('\n')
