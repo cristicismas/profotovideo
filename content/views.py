@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.contrib.admin.views.decorators import staff_member_required
-from django.contrib import admin
-from django.contrib import messages
+from django.contrib import admin, messages
 from django.http import HttpResponseRedirect, HttpResponse
+from django.core.exceptions import ObjectDoesNotExist
 
 from .forms import MultiplePhotosForm
 from .models import Photo, Album, Video
@@ -10,7 +10,11 @@ from .models import Photo, Album, Video
 
 def index(request):
     photos = Photo.objects.filter(isFeatured=True)
-    video = Video.objects.get(isFeatured=True)
+
+    try:
+        video = Video.objects.get(isFeatured=True)
+    except:
+        video = None
 
     context = {
         'photos': photos,
