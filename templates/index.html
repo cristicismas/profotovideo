@@ -17,17 +17,36 @@ ProFotoVideo | Fotografii, filmari si albume pentru nunti, botezuri, etc.
 {% block content %}
 
 <section id="hero">
-  <h1 id="hero-title">ProFotoVideo</h1>
+  <div class="hero-text">
+    <h1 id="hero-title">ProFotoVideo</h1>
 
-  <div id="hero-info">
-    <div class="hero-description">
-      Servicii profesionale de filmări HD sau 4K, fotografii și albume pentru cele mai frumoase amintiri din viața ta.
-    </div>
-    
-    <div class="hero-video">
-      <iframe src="{{ video.url }}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <div id="hero-info">
+      <div class="hero-description">
+        Servicii profesionale de filmări HD sau 4K, fotografii și albume pentru cele mai frumoase amintiri din viața ta.
+      </div>
+
+      <div class="links-group">
+        <a class="photo-link" href="/photo">
+          Foto 
+          <img src="{% static 'assets/images/photo-camera.svg' %}" alt="Photo Camera Icon" class="icon">
+        </a>
+
+        <a class="video-link" href="/video">
+          Video
+          <img src="{% static 'assets/images/play-button.svg' %}" alt="Video Icon" class="icon">
+        </a>
+
+        <a class="albums-link" href="/albums">
+          Albume
+          <img src="{% static 'assets/images/photo-album.svg' %}" alt="Album Icon" class="icon">
+        </a>
+      </div>
     </div>
   </div>
+
+  <img src="https://i.lensdump.com/i/i6i9fM.jpg" draggable="false" alt="Photo Camera Illustration" class="hero-image">
+
+  <button id="scrolldown-btn">Mai multe &darr;</button>
 </section>
 
 <div class="hr"></div>
@@ -96,6 +115,8 @@ ProFotoVideo | Fotografii, filmari si albume pentru nunti, botezuri, etc.
 {% endblock %}
 
 {% block extrascripts %}
+  <script src="{% static 'assets/js/scrolldown.js'%}"></script>
+
   <script src="{% static 'assets/js/lazysizescfg.js'%}"></script>
   <script src="{% static 'assets/js/vendor/lazysizes.min.js'%}"></script>
 
