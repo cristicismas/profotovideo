@@ -24,6 +24,7 @@
 
 #photos {
   width: 85%;
+  z-index: 2;
   margin: 0 auto 100px;
 }
 
