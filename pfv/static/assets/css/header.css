@@ -6,6 +6,7 @@ header {
   border-bottom: 2px solid #555;
   overflow: hidden;
   position: fixed;
+  transition: all .5s ease-in-out;
   top: 0;
   width: 100%;
   z-index: 1000;
