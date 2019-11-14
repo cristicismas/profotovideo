@@ -26,17 +26,17 @@ ProFotoVideo | Fotografii, filmari si albume pentru nunti, botezuri, etc.
       </div>
 
       <div class="links-group">
-        <a class="photo-link" href="/photo">
+        <a class="photo-link" href="{% url 'photo' %}">
           Foto 
           <img src="{% static 'assets/images/photo-camera.svg' %}" alt="Photo Camera Icon" class="icon">
         </a>
 
-        <a class="video-link" href="/video">
+        <a class="video-link" href="{% url 'video' %}">
           Video
           <img src="{% static 'assets/images/play-button.svg' %}" alt="Video Icon" class="icon">
         </a>
 
-        <a class="albums-link" href="/albums">
+        <a class="albums-link" href="{% url 'albums' %}">
           Albume
           <img src="{% static 'assets/images/photo-album.svg' %}" alt="Album Icon" class="icon">
         </a>
