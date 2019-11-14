@@ -80,6 +80,7 @@
 
 #hero .links-group .photo-link:hover {
   color: #008cff;
+  background-color: rgba(0, 140, 255, .1);
 }
 
 #hero .links-group .photo-link:hover .icon {
@@ -88,6 +89,7 @@
 
 #hero .links-group .video-link:hover {
   color: #ffa600;
+  background-color: rgba(255, 166, 0, .1);
 }
 
 #hero .links-group .video-link:hover .icon {
@@ -96,6 +98,7 @@
 
 #hero .links-group .albums-link:hover {
   color: #ff4343;
+  background-color: rgba(255, 67, 67, .2);
 }
 
 #hero .links-group .albums-link:hover .icon {
