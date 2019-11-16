@@ -25,6 +25,7 @@ SECURE_BROWSER_XSS_FILTER = True if ENV == 'PRODUCTION' else False
 
 CSRF_COOKIE_SECURE = True if ENV == 'PRODUCTION' else False
 SESSION_COOKIE_SECURE = True if ENV == 'PRODUCTION' else False
+SESSION_COOKIE_SAMESITE = None if ENV == 'PRODUCTION' else 'Lax'
 
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(', ')
