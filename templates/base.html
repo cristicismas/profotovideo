@@ -41,7 +41,10 @@
         {% if 'photo' in request.path %}
           class="active"
         {% endif %}
-        href="{% url 'photo' %}">Foto</a>
+        href="{% url 'photo' %}">
+          Foto
+          <img src="{% static 'assets/images/photo-camera.svg' %}" alt="Camera Icon" class="icon">
+        </a>
       </li>
 
       <li>
@@ -49,7 +52,10 @@
         {% if 'video' in request.path %}
           class="active"
         {% endif %}
-        href="{% url 'video' %}">Video</a>
+        href="{% url 'video' %}">
+          Video
+          <img src="{% static 'assets/images/play-button.svg' %}" alt="Play Button Icon" class="icon">
+        </a>
       </li>
 
       <li>
@@ -57,7 +63,10 @@
         {% if 'albums' in request.path %}
           class="active"
         {% endif %}
-        href="{% url 'albums' %}">Albume</a>
+        href="{% url 'albums' %}">
+          Albume
+          <img src="{% static 'assets/images/album.svg' %}" alt="Album Icon" class="icon">
+        </a>
       </li>
     </nav>
   </header>
