@@ -44,7 +44,11 @@ ProFotoVideo | Fotografii, filmari si albume pentru nunti, botezuri, etc.
     </div>
   </div>
 
-  <img src="https://i.lensdump.com/i/i6i9fM.jpg" draggable="false" alt="Photo Camera Illustration" class="hero-image">
+  <img src="{% static 'assets/images/hero-small.jpg' %}" srcset="
+    {% static 'assets/images/hero-large.jpg' %} 2000w, 
+    {% static 'assets/images/hero-medium.jpg' %} 1500w, 
+    {% static 'assets/images/hero-small.jpg' %} 1000w
+  " sizes="100vw" draggable="false" alt="Photo Camera Illustration" class="hero-image">
 
   <button id="scrolldown-btn">Mai multe &darr;</button>
 </section>
