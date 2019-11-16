@@ -20,11 +20,12 @@
 }
 
 #hero .links-group > * {
+  display: inline-flex;
   position: relative;
   font-size: 25px;
   color: #fff;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 10px 20px 10px 15px;
   margin-right: 10px;
   transition: all 0.3s;
 }
@@ -37,6 +38,7 @@
   display: block;
   margin-top: 5px;
   right: 0;
+  bottom: 0;
   transition: width 0.3s ease;
   -webkit-transition: width 0.3s ease;
 }
@@ -71,6 +73,11 @@
   transition: all 0.1s;
 }
 
+#hero .links-group > *:hover .icon {
+  opacity: 1;
+  left: 10px;
+}
+
 #hero .links-group .photo-link .icon {
   filter: invert(0.5) sepia(1) saturate(5) hue-rotate(180deg);
 }
@@ -81,11 +88,6 @@
 
 #hero .links-group .albums-link .icon {
   filter: invert(0.5) sepia(1) saturate(50) hue-rotate(325deg);
-}
-
-#hero .links-group > *:hover .icon {
-  opacity: 1;
-  left: 5px;
 }
 
 #hero .links-group .photo-link:hover {
