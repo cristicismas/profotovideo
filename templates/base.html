@@ -39,7 +39,9 @@
       <li>
         <a 
         {% if 'photo' in request.path %}
-          class="active"
+          class="active photo-link"
+        {% else %}
+          class="photo-link"
         {% endif %}
         href="{% url 'photo' %}">
           Foto
@@ -50,7 +52,9 @@
       <li>
         <a 
         {% if 'video' in request.path %}
-          class="active"
+          class="active video-link"
+        {% else %}
+          class="video-link"
         {% endif %}
         href="{% url 'video' %}">
           Video
@@ -61,7 +65,9 @@
       <li>
         <a 
         {% if 'albums' in request.path %}
-          class="active"
+          class="active albums-link"
+        {% else %}
+          class="albums-link"
         {% endif %}
         href="{% url 'albums' %}">
           Albume

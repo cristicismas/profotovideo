@@ -46,11 +46,53 @@ header nav a {
   display: flex;
 }
 
+header nav .photo-link:hover,
+header nav .photo-link.active {
+  color: #008cff;
+}
+
+header nav .video-link:hover,
+header nav .video-link.active {
+  color: #ffa600;
+}
+
+header nav .albums-link:hover,
+header nav .albums-link.active {
+  color: #ff4343;
+}
+
+header nav .photo-link:hover .icon,
+header nav .photo-link.active .icon {
+  filter: invert(.55) sepia(1) saturate(5) hue-rotate(180deg);
+}
+
+header nav .video-link:hover .icon,
+header nav .video-link.active .icon {
+  filter: invert(0.45) sepia(1) saturate(5) hue-rotate(-15deg);
+}
+
+header nav .albums-link:hover .icon,
+header nav .albums-link.active .icon {
+  filter: invert(0.5) sepia(1) saturate(50) hue-rotate(325deg);
+}
+
 header nav a .icon {
   position: relative;
   width: 24px;
   height: 24px;
   margin-left: 10px;
+}
+
+header nav .photo-link:after {
+  background: #008cff;
+}
+
+header nav .video-link:after {
+  background: #ffa600;
+}
+
+header nav .albums-link:after {
+  background: #ff4343;
 }
 
 header nav a:after {
@@ -60,7 +102,6 @@ header nav a:after {
   height: 3px;
   right: 0;
   bottom: 0;
-  background: #008cff;
   transition: width 0.2s ease;
   -webkit-transition: width 0.2s ease;
 }
@@ -69,7 +110,6 @@ header nav a:hover:after,
 header nav .active:after {
   width: 100%;
   left: 0;
-  background: #008cff;
 }
 
 header nav a:hover {
