@@ -126,20 +126,34 @@
 
 #hero #scrolldown-btn {
   position: absolute;
-  bottom: 100px;
-  left: 100px;
+  bottom: 70px;
+  left: 120px;
   font-size: 20px;
+  padding: 50px;
   margin-top: 55px;
   cursor: pointer;
-  background-color: #111;
-  color: #eee;
+  background-color: transparent;
   border: none;
-  padding: 5px 10px;
   transition: all 0.2s;
+  animation: float 2s infinite ease-in-out;
 }
 
-#hero #scrolldown-btn:hover {
-  background-color: #191919;
+#hero #scrolldown-btn .icon {
+  height: 50px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* WIDTH QUERIES */
