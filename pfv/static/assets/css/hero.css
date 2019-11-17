@@ -79,7 +79,7 @@
 }
 
 #hero .links-group .photo-link .icon {
-  filter: invert(.6) sepia(1) saturate(5) hue-rotate(180deg);
+  filter: invert(.55) sepia(1) saturate(5) hue-rotate(180deg);
 }
 
 #hero .links-group .video-link .icon {
@@ -253,7 +253,7 @@
   }
 
   #hero .links-group .photo-link .icon {
-    filter: invert(.6) sepia(1) saturate(5) hue-rotate(180deg);
+    filter: invert(.55) sepia(1) saturate(5) hue-rotate(180deg);
   }
   
   #hero .links-group .video-link .icon {
