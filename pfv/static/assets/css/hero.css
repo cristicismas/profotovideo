@@ -283,10 +283,6 @@
     display: flex;
     margin: 5px;
   }
-
-  #hero .links-group > * .icon {
-    margin-left: 10px;
-  }
 }
 
 /* HEIGHT QUERIES */
