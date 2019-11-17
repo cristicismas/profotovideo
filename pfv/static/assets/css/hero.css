@@ -79,11 +79,11 @@
 }
 
 #hero .links-group .photo-link .icon {
-  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(180deg);
+  filter: invert(.6) sepia(1) saturate(5) hue-rotate(180deg);
 }
 
 #hero .links-group .video-link .icon {
-  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(10deg);
+  filter: invert(0.45) sepia(1) saturate(5) hue-rotate(-15deg);
 }
 
 #hero .links-group .albums-link .icon {
