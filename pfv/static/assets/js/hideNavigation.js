@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
 function hideShowElement(element, lastTopOffset) {
   const topOffset = getTopOffset();
 
-  if (topOffset < lastTopOffset && topOffset !== 0) {
+  if (topOffset < lastTopOffset) {
     element.style.top = '0';
   } else {
     element.style.top = `-${element.clientHeight + 5}px`;
