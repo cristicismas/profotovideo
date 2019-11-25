@@ -7,7 +7,7 @@ header {
   overflow: hidden;
   position: fixed;
   transition: all .5s ease-in-out;
-  top: 0;
+  top: -85px;
   width: 100%;
   z-index: 1000;
 }
