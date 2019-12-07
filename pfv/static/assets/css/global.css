@@ -62,7 +62,8 @@ li {
   cursor: default;
   display: block;
   width: 200px;
-  margin: 160px auto 100px;
+  margin: 120px auto 100px;
+  padding-top: 40px;
   font-weight: normal;
   font-size: 35px;
   text-shadow: 5px 5px 5px #111;
