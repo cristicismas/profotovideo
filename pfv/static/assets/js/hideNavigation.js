@@ -2,6 +2,7 @@ window.addEventListener('load', function() {
   const offsetToShow = 100;
 
   const header = document.querySelector('header');
+  header.classList.add('show-hide');
   handleHideShowElement(header);
 
   document.addEventListener('scroll', function() {
