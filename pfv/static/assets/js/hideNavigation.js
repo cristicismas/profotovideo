@@ -1,28 +1,24 @@
-var lastTopOffset;
-
 window.addEventListener('load', function() {
-  const header = document.querySelector('header');
-  lastTopOffset = getTopOffset();
+  const offsetToShow = 100;
 
-  lastTopOffset = hideShowElement(header, lastTopOffset);
+  const header = document.querySelector('header');
+  handleHideShowElement(header);
 
   document.addEventListener('scroll', function() {
-    lastTopOffset = hideShowElement(header, lastTopOffset);
+    handleHideShowElement(header);
   });
+
+  function handleHideShowElement(element) {
+    const topOffset = getTopOffset();
+
+    if (topOffset < offsetToShow) {
+      element.style.opacity = '0';
+    } else {
+      element.style.opacity = '1';
+    }
+  }
 });
 
-function hideShowElement(element, lastTopOffset) {
-  const topOffset = getTopOffset();
-
-  if (topOffset < lastTopOffset && topOffset !== 0) {
-    element.style.top = '0';
-  } else {
-    element.style.top = `-${element.clientHeight + 5}px`;
-  }
-
-  return topOffset
-}
-
 function getTopOffset() {
-  return topOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 }
