@@ -1,41 +1,47 @@
-photos = $('#photos');
-
-photos.masonry({
-  itemSelector: '.photo-container a',
-  columnWidth: 50,
-  gutter: 20,
-  fitWidth: true
-});
-
-var lastWidth = window.innerWidth;
+const photos = $('#photos');
+var lastWidth = $(window).width();
 var isMasonryActive = true;
 
-if (window.innerWidth < 700) {
+function onDebouncedResize(callback) {
+  let resizeTimeout;
+
+  $(window).on('resize', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(callback, 50);
+  });
+}
+
+function initializeMasonry() {
+  photos.masonry({
+    itemSelector: '.photo-container a',
+    columnWidth: 50,
+    gutter: 20,
+    fitWidth: true
+  });
+}
+
+initializeMasonry();
+
+if ($(window).width() < 700) {
   photos.masonry('destroy');
   isMasonryActive = false;
 }
 
-$(window).on('resize', function() {
-  if ($(window).width() < 710 && lastWidth >= 700 && isMasonryActive) {
+onDebouncedResize(function() {
+  if ($(window).width() < 700 && isMasonryActive) {
     photos.masonry('destroy');
     isMasonryActive = false;
-  } else if (lastWidth < 710 && $(window).width() >= 700) {
-    photos.masonry({
-      itemSelector: '.photo-container a',
-      columnWidth: 50,
-      gutter: 20,
-      fitWidth: true
-    });
-
-    setTimeout(() => {
-      isMasonryActive = true;
-      photos.masonry('layout');
-    }, 200);
+  } else if ($(window).width() > 700 && !isMasonryActive) {
+    initializeMasonry();
+    isMasonryActive = true;
+    photos.masonry('layout');
   }
 
   lastWidth = $(window).width();
 });
 
+
+// Run masonry('layout') again on every photo load
 $(document).on('lazyloaded', function() {
   $('#photos .photo.lazyloaded').each(function() {
     $(this).css({ opacity: 1 });
