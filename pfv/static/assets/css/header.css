@@ -9,12 +9,13 @@ header {
   top: 0;
   width: 100%;
   opacity: 0;
-  animation: fadein .5s 1s ease-in-out forwards;
+  animation: fadein .5s ease-in-out forwards;
   z-index: 1000;
 }
 
-header.show-hide {
-  animation: none;
+header#index-header {
+  display: none;
+  opacity: 0;
 }
 
 @keyframes fadein {

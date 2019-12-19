@@ -2,8 +2,6 @@ window.addEventListener('load', function() {
   const offsetToShow = 100;
 
   const header = document.querySelector('header');
-  header.classList.add('show-hide');
-  handleHideShowElement(header);
 
   document.addEventListener('scroll', function() {
     handleHideShowElement(header);
@@ -12,10 +10,8 @@ window.addEventListener('load', function() {
   function handleHideShowElement(element) {
     const topOffset = getTopOffset();
 
-    if (topOffset < offsetToShow) {
-      element.style.opacity = '0';
-    } else {
-      element.style.opacity = '1';
+    if (topOffset > offsetToShow) {
+      element.style.display = 'flex';
     }
   }
 });

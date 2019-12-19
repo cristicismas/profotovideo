@@ -32,7 +32,11 @@
   </script>
 </head>
 <body>
-  <header>
+  <header
+    {% if request.get_full_path == "/" %}
+      id="index-header"
+    {% endif %}>
+
     <a href="{% url 'index' %}"><h1>ProFotoVideo</h1></a> 
     
     <nav>
