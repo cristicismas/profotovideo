@@ -141,7 +141,7 @@ header nav a:hover {
   }
 
   header#index-header {
-    display: none;
+    display: none !important;
   }
 
   header + .title {
