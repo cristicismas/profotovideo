@@ -185,11 +185,7 @@ header nav a:hover {
   }
 
   header nav {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 18px;
-  }
-
-  header nav a {
-    padding: 5px 10px;
   }
 }
