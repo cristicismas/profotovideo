@@ -7,7 +7,7 @@ verify_ssl = true
 autopep8 = "*"
 
 [packages]
-django = "*"
+django = ">=3.0.7"
 python-dotenv = "*"
 dj-database-url = "*"
 psycopg2-binary = "*"
