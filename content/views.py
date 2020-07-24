@@ -110,9 +110,7 @@ def add_photos(request):
             photosToCreate = []
 
             for photo in photos:
-                photosToCreate.append(Photo(image=photo))
-
-            Photo.objects.bulk_create(photosToCreate, ignore_conflicts=True)
+                Photo.objects.create(image=photo)
 
             messages.success(request, 'Photos added successfully.')
             return HttpResponseRedirect('/admin/content/photo')
