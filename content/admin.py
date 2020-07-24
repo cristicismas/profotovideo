@@ -7,12 +7,15 @@ admin.site.register(Album)
 
 
 class PhotoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'isFeatured', 'url')
-    list_display_links = ('id', 'url')
+    list_display = ('id', 'isFeatured', 'image_name')
+    list_display_links = ('id', 'image_name')
     list_editable = ('isFeatured',)
     list_filter = ('isFeatured',)
     list_per_page = 25
-    readonly_fields = ('preview',)
+
+    def image_name(self, obj):
+        return obj.image.public_id
+
 
 
 admin.site.register(Photo, PhotoAdmin)

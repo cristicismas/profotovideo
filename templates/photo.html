@@ -18,8 +18,8 @@ ProFotoVideo | Fotografii
 <section id="photos" data-pswp>
   {% for photo in photos %}
     <div class="photo-container">
-      <a href="{{ photo.url }}" class="photo-link">
-        <img class="photo lazyload" data-src="{{ photo.url }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="photo">
+      <a href="{{ photo.image.url }}" class="photo-link">
+        <img class="photo lazyload" data-src="{{ photo.thumbnail.url }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="photo">
       </a>
     </div>
   {% endfor%}

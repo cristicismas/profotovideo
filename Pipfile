@@ -14,6 +14,7 @@ psycopg2-binary = "*"
 whitenoise = "*"
 livereload = "*"
 gunicorn = "*"
+cloudinary = "*"
 
 [requires]
 python_version = "3.8"

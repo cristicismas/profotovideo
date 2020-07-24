@@ -102,15 +102,15 @@ def add_photos(request):
     }
 
     if request.method == 'POST':
-        form = MultiplePhotosForm(request.POST)
+        form = MultiplePhotosForm(request.POST, request.FILES)
+        
+        photos = request.FILES.getlist('photos')
 
         if form.is_valid():
-            photoURLs = request.POST['photos'].split('\n')
-
             photosToCreate = []
 
-            for url in photoURLs:
-                photosToCreate.append(Photo(url=url))
+            for photo in photos:
+                photosToCreate.append(Photo(image=photo))
 
             Photo.objects.bulk_create(photosToCreate, ignore_conflicts=True)
 

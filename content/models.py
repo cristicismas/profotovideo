@@ -1,3 +1,6 @@
+from cloudinary.models import CloudinaryField
+import cloudinary
+
 from django.db import models
 from django.utils.safestring import mark_safe
 
@@ -18,15 +21,19 @@ class Album(models.Model):
 
 
 class Photo(models.Model):
-    url = models.URLField(max_length=200, unique=True)
+    image = CloudinaryField('image', transformation={ 'height': 2000 })
+    thumbnail = CloudinaryField(blank=True, null=True, editable=False)
     isFeatured = models.BooleanField(default=False)
     updated = models.DateTimeField(auto_now=True)
 
-    def preview(self):
-        return mark_safe('<a href="%s"><img src="%s" class="image-preview" /></a>' % (self.url, self.url))
+    def save(self, *args, **kwargs):
+        thumb_name = 'thumb_' + self.image.name
+        self.thumbnail = cloudinary.uploader.upload_resource(self.image, public_id=thumb_name, resource_type='image', width=640)
+
+        super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.url
+        return str(self.image.public_id)
 
     class Meta:
         ordering = ['-updated']

@@ -1,5 +1,6 @@
 import dj_database_url
 import dotenv
+import cloudinary
 
 import os
 
@@ -30,6 +31,14 @@ SESSION_COOKIE_SAMESITE = None if ENV == 'PRODUCTION' else 'Lax'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(', ')
 
+# Cloudinary
+
+cloudinary.config(
+    cloud_name = os.getenv('CLOUD_NAME'),
+    api_key = os.getenv('CLOUD_KEY'),
+    api_secret = os.getenv('CLOUD_SECRET')
+)
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'content.apps.ContentConfig',
+    'cloudinary',
     'livereload'
 ]
 
