@@ -107,10 +107,9 @@ def add_photos(request):
         photos = request.FILES.getlist('photos')
 
         if form.is_valid():
-            photosToCreate = []
-
             for photo in photos:
                 Photo.objects.create(image=photo)
+                HttpResponse('Buffering...')
 
             messages.success(request, 'Photos added successfully.')
             return HttpResponseRedirect('/admin/content/photo')
