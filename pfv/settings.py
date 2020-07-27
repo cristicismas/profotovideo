@@ -36,7 +36,8 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(', ')
 cloudinary.config(
     cloud_name = os.getenv('CLOUD_NAME'),
     api_key = os.getenv('CLOUD_KEY'),
-    api_secret = os.getenv('CLOUD_SECRET')
+    api_secret = os.getenv('CLOUD_SECRET'),
+    secure = True
 )
 
 # Application definition
