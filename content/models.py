@@ -27,8 +27,11 @@ class Photo(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):
-        thumb_name = 'thumb_' + self.image.name
-        self.thumbnail = cloudinary.uploader.upload_resource(self.image, public_id=thumb_name, resource_type='image', width=640)
+        # If self.image has the name attribute, then the photo is uploaded to the cloud for the first time.
+        # Otherwise, the photo is being edited (is_featured is probably being changed).
+        if hasattr(self.image, 'name'):
+            thumb_name = 'thumb_' + self.image.name
+            self.thumbnail = cloudinary.uploader.upload_resource(self.image, public_id=thumb_name, resource_type='image', width=640)
 
         super().save(*args, **kwargs)
 
