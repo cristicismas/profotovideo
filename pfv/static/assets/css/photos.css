@@ -6,7 +6,6 @@
 .photo-container a {
   display: block;
   overflow: hidden;
-  border: 2px solid #999;
   margin: 0 auto 20px;
   border-radius: 5px;
 }
