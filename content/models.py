@@ -35,6 +35,9 @@ class Photo(models.Model):
 
         super().save(*args, **kwargs)
 
+    def preview(self):
+        return mark_safe('<a href="%s"><img src="%s" class="image-preview" /></a>' % (self.thumbnail.url, self.thumbnail.url))
+
     def __str__(self):
         return str(self.image.public_id)
 

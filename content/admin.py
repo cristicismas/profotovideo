@@ -11,6 +11,7 @@ class PhotoAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'image_name')
     list_editable = ('isFeatured',)
     list_filter = ('isFeatured',)
+    readonly_fields = ('preview',)
     list_per_page = 25
 
     def image_name(self, obj):
