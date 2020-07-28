@@ -106,10 +106,13 @@ def add_photos(request):
         
         photos = request.FILES.getlist('photos')
 
+        current_photo_count = 0
+
         if form.is_valid():
             for photo in photos:
+                current_photo_count += 1
+                messages.success(request, 'Photo number ' + current_photo_count + ' is being added... Please wait.')
                 Photo.objects.create(image=photo)
-                print('Buffering...')
 
             messages.success(request, 'Photos added successfully.')
             return HttpResponseRedirect('/admin/content/photo')
