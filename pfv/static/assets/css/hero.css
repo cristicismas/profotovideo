@@ -90,18 +90,20 @@
   filter: invert(0.6) sepia(1) saturate(5) hue-rotate(310deg);
 }
 
+#hero .links-group > *:hover {
+  background-color: rgba(1, 1, 1, .8);
+	box-shadow: 0 0 15px 5px rgba(17, 17, 17, 0.7);
+}
+
 #hero .links-group .photo-link:hover {
-  background-color: #111;
   color: #008cff;
 }
 
 #hero .links-group .video-link:hover {
-  background-color: #111;
   color: #ffa600;
 }
 
 #hero .links-group .albums-link:hover {
-  background-color: #111;
   color: #ff4343;
 }
 
