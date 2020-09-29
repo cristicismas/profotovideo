@@ -6,9 +6,13 @@
 
 .env:
 
-1. ALLOWED_HOSTS=localhost
-2. SECRET_KEY=your_secret_key
-3. DATABASE_URL=sqlite:///db.sqlite3
+```
+ALLOWED_HOSTS=localhost
+SECRET_KEY=your_secret_key
+DATABASE_URL=sqlite:///db.sqlite3
+```
+
+setup:
 
 ```sh
 pipenv shell
